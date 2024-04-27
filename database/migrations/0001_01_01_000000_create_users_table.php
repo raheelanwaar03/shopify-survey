@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('referral')->default('default');
             $table->string('status')->default('pending');
             $table->string('role')->default('user');
-            $table->string('user_id');
+            $table->string('user_id')->unique();
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();

@@ -17,9 +17,9 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      */
-    public function create(): View
+    public function create($referral = 'default'): View
     {
-        return view('auth.register');
+        return view('auth.register', compact('referral'));
     }
 
     /**
@@ -31,13 +31,18 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
+
+        // giving user new Id
+        $user_id = "SH" . rand(11111, 99999);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'referral' => $request->referral,
+            'user_id' => $user_id,
             'password' => Hash::make($request->password),
         ]);
 
@@ -45,6 +50,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('dashboard', absolute: false));
+        return redirect(route('User.Dashboard', absolute: false));
     }
 }

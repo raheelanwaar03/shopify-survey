@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Xmee | Login and Register Form Html Templates</title>
+    <title>{{ env("APP_NAME") }} | Registeration Page</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -22,6 +22,7 @@
 </head>
 
 <body>
+    <x-alert />
     <div id="preloader" class="preloader">
         <div class='inner'>
             <div class='line1'></div>
@@ -34,7 +35,8 @@
             <div class="fxt-heading-content">
                 <div class="fxt-inner-wrap fxt-transformX-R-50 fxt-transition-delay-3">
                     <div class="fxt-transformX-R-50 fxt-transition-delay-10">
-                        <a href="login-33.html" class="fxt-logo"><img src="{{ asset('auth/img/logo-33.png') }}" alt="Logo"></a>
+                        <a href="login-33.html" class="fxt-logo"><img src="{{ asset('auth/img/logo-33.png') }}"
+                                alt="Logo"></a>
                     </div>
                     <div class="fxt-transformX-R-50 fxt-transition-delay-10">
                         <div class="fxt-middle-content">
@@ -55,7 +57,8 @@
                     <div class="fxt-inner-wrap fxt-opacity fxt-transition-delay-13">
                         <h2 class="fxt-page-title">Sign Up</h2>
                         <p class="fxt-description">Sign Up to try our amazing services</p>
-                        <form method="POST">
+                        <form action="{{ route('register') }}" method="POST">
+                            @csrf
                             <div class="form-group">
                                 <label for="name" class="fxt-label">Full Name</label>
                                 <input type="text" id="name" class="form-control" name="name"
@@ -72,39 +75,26 @@
                                     placeholder="Enter Password" required="required">
                             </div>
                             <div class="form-group">
+                                <label for="confirm_password" class="fxt-label">Confirm Password</label>
+                                <input id="confirm_password" type="password" class="form-control" name="password_confirmation"
+                                    placeholder="Confirm Password" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label class="fxt-label">Sponsor</label>
+                                <input type="text" value="{{ $referral }}" class="form-control" name="referral"
+                                    readonly>
+                            </div>
+                            <div class="form-group">
                                 <div class="fxt-checkbox-box">
-                                    <input id="checkbox1" type="checkbox">
+                                    <input id="checkbox1" required type="checkbox">
                                     <label for="checkbox1" class="ps-4">I agree with Terms of Service. Terms Of
                                         Payments and Privacy Policy</label>
                                 </div>
                             </div>
                             <div class="form-group mb-3">
-                                <button type="submit" class="fxt-btn-fill">Log in</button>
+                                <button type="submit" class="fxt-btn-fill">Register</button>
                             </div>
                         </form>
-                        <div class="fxt-divider-text">OR</div>
-                        <div id="fxt-login-option" class="fxt-login-option">
-                            <ul>
-                                <li class="fxt-google active">
-                                    <a href="#">
-                                        <span class="fxt-option-icon"><i class="fab fa-google"></i></span>
-                                        <span class="fxt-option-text ml-2">Continue with Google</span>
-                                    </a>
-                                </li>
-                                <li class="fxt-facebook">
-                                    <a href="#">
-                                        <span class="fxt-option-icon"><i class="fab fa-facebook-f"></i></span>
-                                        <span class="fxt-option-text ml-2">Continue with Facebook</span>
-                                    </a>
-                                </li>
-                                <li class="fxt-apple">
-                                    <a href="#">
-                                        <span class="fxt-option-icon"><i class="fab fa-apple"></i></span>
-                                        <span class="fxt-option-text ml-2">Continue with Apple</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>

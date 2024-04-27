@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Xmee | Login and Register Form Html Templates</title>
+    <title>{{ env('APP_NAME') }} | Login Page</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -22,6 +22,7 @@
 </head>
 
 <body>
+    <x-alert />
     <div id="preloader" class="preloader">
         <div class='inner'>
             <div class='line1'></div>
@@ -55,7 +56,7 @@
                 <div class="fxt-main-form">
                     <div class="fxt-inner-wrap fxt-opacity fxt-transition-delay-13">
                         <h2 class="fxt-page-title">Log In</h2>
-                        <p class="fxt-description">Log In to try our amazing servuces</p>
+                        <p class="fxt-description">Log In To Earn Unlimited bounce</p>
                         <form action="{{ route('login') }}" method="POST">
                             @csrf
                             <div class="form-group">
