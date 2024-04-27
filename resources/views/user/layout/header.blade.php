@@ -12,10 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="{{ asset('asset/images/favicon.png') }}">
     <!-- Page Title Here -->
-    <title>Shopify - Dashboard</title>
+    <title>{{ env('APP_NAME') }} | User Dashboard</title>
     @yield('links')
-    <!-- <link href="{{ asset('asset/vendor/jquery-nice-select/css/nice-select.css') }}" rel="stylesheet"> -->
-    <link rel="stylesheet" href="{{ asset('asset/vendor/nouislider/nouislider.min.css') }}">
     <!-- Style css -->
     <link href="{{ asset('asset/css/style.css') }}" rel="stylesheet">
 </head>
@@ -38,7 +36,7 @@
 	</div> --}}
     <div id="main-wrapper">
         <div class="nav-header" style="background-color: #4cb32b;">
-            <a href="index.html" class="brand-logo">
+            <a href="{{ route('User.Dashboard') }}" class="brand-logo">
                 <svg class="logo-abbr" width="53" height="53" viewBox="0 0 53 53">
                     <path
                         d="M21.6348 8.04782C21.6348 5.1939 23.9566 2.87204 26.8105 2.87204H28.6018L28.0614 1.37003C27.7576 0.525342 26.9616 0 26.1132 0C25.8781 0 25.639 0.0403711 25.4052 0.125461L7.3052 6.7133C6.22916 7.105 5.67535 8.29574 6.06933 9.37096L7.02571 11.9814H21.6348V8.04782Z"
@@ -97,6 +95,17 @@
                     <li><a href="{{ route('User.Dashboard') }}" aria-expanded="false">
                             <i class="flaticon-025-dashboard text-white"></i>
                             <span class="nav-text text-white">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <i class="fa-solid fa-power-off text-white" style="font-size: 20px"></i>
+                                    <button style="background: none;border:none;color:white;margin-left:10px;">Logout</button>
+                                </div>
+                            </form>
                         </a>
                     </li>
                     <!-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
