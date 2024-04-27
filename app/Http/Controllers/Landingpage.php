@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\admin\AdminPlans;
 use Illuminate\Http\Request;
 
 class Landingpage extends Controller
@@ -13,7 +14,8 @@ class Landingpage extends Controller
 
     public function plans()
     {
-        return view('auth.plans');
+        $plans = AdminPlans::get();
+        return view('auth.plans',compact('plans'));
     }
 
 }

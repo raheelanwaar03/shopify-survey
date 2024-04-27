@@ -35,14 +35,16 @@
             <div class="fxt-heading-content">
                 <div class="fxt-inner-wrap fxt-transformX-R-50 fxt-transition-delay-3">
                     <div class="fxt-transformX-R-50 fxt-transition-delay-10">
-                        <div class="card bg-transparent mb-2" style="border: 1px solid #1ebe92">
-                            <div class="card-body text-center">
-                                <h3 style="color:#1ebe92">Silver</h3>
-                                <h6 style="color:#1ebe92">Investment : 100$</h6>
-                                <h6 style="color:#1ebe92">Daily Earning : 1$</h6>
-                                <h6 style="color:#1ebe92">Expire : Lifetime</h6>
+                        @foreach ($plans as $item)
+                            <div class="card bg-transparent mb-2" style="border: 1px solid #1ebe92">
+                                <div class="card-body text-center">
+                                    <h3 style="color:#1ebe92">{{ $item->plan_name }}</h3>
+                                    <h6 style="color:#1ebe92">Investment : {{ $item->invest }}$</h6>
+                                    <h6 style="color:#1ebe92">Profit : {{ $item->profit }}$</h6>
+                                    <h6 style="color:#1ebe92">Expire : {{ $item->expire }}</h6>
+                                </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -56,7 +58,9 @@
                             <div class="form-group">
                                 <label for="plan_name" class="fxt-label">Select Plan</label>
                                 <select name="plan_name" id="plan_name" class="form-control">
-                                    <option value="silver">silver</option>
+                                    @foreach ($plans as $item)
+                                        <option value="{{ $item->plan_name }}">{{ $item->plan_name }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
