@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\admin\AdminPlans;
 use App\Models\admin\ContactUs;
 use App\Models\admin\referralLevel;
 use App\Models\admin\VerificationText;
@@ -99,8 +100,6 @@ class clean extends Command
         $contact->status = 1;
         $contact->save();
 
-
-
         // set level according to thier referral
 
         $level = new referralLevel();
@@ -116,5 +115,22 @@ class clean extends Command
         $level->level10 = 10;
         $level->status = 1;
         $level->save();
+
+
+        // adding plans
+
+        $plan = new AdminPlans();
+        $plan->plan_name = 'Silver';
+        $plan->invest = '100';
+        $plan->profit = 'Unlimited';
+        $plan->expire = 'LifeTime';
+        $plan->save();
+
+        $plan = new AdminPlans();
+        $plan->plan_name = 'Gold';
+        $plan->invest = '200';
+        $plan->profit = 'Unlimited';
+        $plan->expire = 'LifeTime';
+        $plan->save();
     }
 }

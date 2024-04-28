@@ -32,7 +32,7 @@
                                     </thead>
                                     <tbody>
                                         @forelse ($users as $item)
-                                            <tr>
+                                            <tr id="tr_{{ $item->trxIds->user_id }}">
                                                 <td>{{ $item->user_id }}</td>
                                                 <td>{{ $item->name }}</td>
                                                 <td>{{ $item->balance }}</td>
@@ -46,10 +46,10 @@
                                                 </td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a href="#"
+                                                        <a data-user-id="{{ $item->trxIds->user_id }}"
                                                             class="btn btn-success shadow btn-xs sharp me-1"><i
                                                                 class="fa-solid fa-check"></i></a>
-                                                        <a href="#" class="btn btn-danger shadow btn-xs sharp me-1"><i
+                                                        <a data-user-id="{{ $item->trxIds->user_id }}" class="btn btn-danger shadow btn-xs sharp me-1"><i
                                                                 class="fa-solid fa-xmark"></i></a>
                                                         <a href="#" class="btn btn-primary shadow btn-xs sharp">
                                                             <i class="fa-solid fa-gauge-simple"></i>
@@ -75,4 +75,45 @@
 @section('scripts')
     <script src="{{ asset('asset/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('asset/js/plugins-init/datatables.init.js') }}"></script>
+
+    {{-- User Status mangement --}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.rejectButton').click(function() {
+                var userId = $(this).data('user-id');
+                $.ajax({
+                    url: "{{ route('Admin.Make.User.Rejected') }}",
+                    method: "GET",
+                    data: {
+                        user_id: userId
+                    },
+                    success: function(response) {
+                        $("#" + response['tr']).hide();
+                        alert(response.message);
+                    },
+                });
+            });
+        });
+
+        // make user approve
+
+        $(document).ready(function() {
+            $('.approveButton').click(function() {
+                var userId = $(this).data('user-id');
+                $.ajax({
+                    url: "{{ route('Admin.Make.User.Approved') }}",
+                    method: "GET",
+                    data: {
+                        user_id: userId
+                    },
+                    success: function(response) {
+                        $("#" + response['tr']).hide();
+                        alert(response.message);
+                    },
+                });
+            });
+        });
+    </script>
 @endsection

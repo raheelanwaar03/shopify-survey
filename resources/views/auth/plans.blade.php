@@ -8,14 +8,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('auth/img/favicon.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('asset/images/logo.png') }}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('auth/css/bootstrap.min.css') }}">
-    <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="{{ asset('auth/css/fontawesome-all.min.css') }}">
-    <!-- Flaticon CSS -->
-    <link rel="stylesheet" href="{{ asset('auth/font/flaticon.css') }}">
-    <!-- Google Web Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('auth/style.css') }}">
@@ -45,6 +41,16 @@
                                 </div>
                             </div>
                         @endforeach
+                        <div class="card bg-transparent mb-2" style="border: 1px solid #1ebe92">
+                            <div class="card-body text-center">
+                                <h6 class="text-white text-center">Use these details for payment</h6>
+                                <h5 style="color:#1ebe92">Name : {{ $wallet->name }}</h5>
+                                <h6 style="color:#1ebe92">Number : <span id="link">{{ $wallet->number }}</span> <i
+                                        onclick="copyReferralLink()" class="fa-regular fa-copy"
+                                        style="font-size:20px;cursor: pointer;"></i></h6>
+                                <h6 style="color:#1ebe92">Bank : {{ $wallet->bank }}</h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,6 +113,18 @@
     <script src="{{ asset('auth/js/validator.min.js') }}"></script>
     <!-- Custom Js -->
     <script src="{{ asset('auth/js/main.js') }}"></script>
+
+    <script>
+        function copyReferralLink() {
+            let referralLink = document.querySelector('#link').innerText;
+            navigator.clipboard.writeText(referralLink);
+
+            // Show tooltip
+            let tooltip = document.createElement('span');
+            alert('Copied');
+
+        }
+    </script>
 
 </body>
 

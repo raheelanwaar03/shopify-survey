@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ env("APP_NAME") }} | Registeration Page</title>
+    <title>{{ env('APP_NAME') }} | Registeration Page</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -35,19 +35,18 @@
             <div class="fxt-heading-content">
                 <div class="fxt-inner-wrap fxt-transformX-R-50 fxt-transition-delay-3">
                     <div class="fxt-transformX-R-50 fxt-transition-delay-10">
-                        <a href="login-33.html" class="fxt-logo"><img src="{{ asset('auth/img/logo-33.png') }}"
+                        <a href="{{ route('login') }}" class="fxt-logo"><img src="{{ asset('asset/images/logo.png') }}"
                                 alt="Logo"></a>
                     </div>
                     <div class="fxt-transformX-R-50 fxt-transition-delay-10">
                         <div class="fxt-middle-content">
                             <div class="fxt-sub-title">Welcome to</div>
-                            <h1 class="fxt-main-title">We're a Digital Agency.</h1>
-                            <p class="fxt-description">We are glad to see you again! Get access to your Orders, Wishlist
-                                and Recommendations.</p>
+                            <h1 class="fxt-main-title">The New Universe Of Earning.</h1>
+                            <p class="fxt-description">Make a part of upcoming success! Add into the new eara of unlimited earning.</p>
                         </div>
                     </div>
                     <div class="fxt-transformX-R-50 fxt-transition-delay-10">
-                        <div class="fxt-switcher-description">Don't have an account?<a href="login-33.html"
+                        <div class="fxt-switcher-description">Don't have an account?<a href="{{ route('login') }}"
                                 class="fxt-switcher-text">Sign In</a></div>
                     </div>
                 </div>
@@ -76,8 +75,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="confirm_password" class="fxt-label">Confirm Password</label>
-                                <input id="confirm_password" type="password" class="form-control" name="password_confirmation"
-                                    placeholder="Confirm Password" required="required">
+                                <input id="confirm_password" type="password" class="form-control"
+                                    name="password_confirmation" placeholder="Confirm Password" required="required">
                             </div>
                             <div class="form-group">
                                 <label class="fxt-label">Sponsor</label>

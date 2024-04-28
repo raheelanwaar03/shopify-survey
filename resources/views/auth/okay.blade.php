@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ env('APP_NAME') }} | Login Page</title>
+    <title>{{ env('APP_NAME') }} | Registeration Page</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -35,47 +35,27 @@
             <div class="fxt-heading-content">
                 <div class="fxt-inner-wrap fxt-transformX-R-50 fxt-transition-delay-3">
                     <div class="fxt-transformX-R-50 fxt-transition-delay-10">
-                        <a href="{{ route('login') }}" class="fxt-logo"><img src="{{ asset('auth/img/logo-33.png') }}"
+                        <a href="{{ route('login') }}" class="fxt-logo"><img src="{{ asset('asset/images/logo.png') }}"
                                 alt="Logo"></a>
                     </div>
                     <div class="fxt-transformX-R-50 fxt-transition-delay-10">
                         <div class="fxt-middle-content">
                             <div class="fxt-sub-title">Welcome to</div>
-                            <h1 class="fxt-main-title">{{ env('APP_NAME') }}.</h1>
-                            <p class="fxt-description">We are glad to see you again! Share your link to earn and win
-                                more profit.</p>
+                            <h1 class="fxt-main-title">The New Universe Of Earning.</h1>
+                            <p class="fxt-description">Make a part of upcoming success! Add into the new eara of
+                                unlimited earning.</p>
                         </div>
-                    </div>
-                    <div class="fxt-transformX-R-50 fxt-transition-delay-10">
-                        <div class="fxt-switcher-description">Don't have an account?<a href="{{ route('register') }}"
-                                class="fxt-switcher-text">Register</a></div>
                     </div>
                 </div>
             </div>
             <div class="fxt-form-content">
                 <div class="fxt-main-form">
                     <div class="fxt-inner-wrap fxt-opacity fxt-transition-delay-13">
-                        <h2 class="fxt-page-title">Log In</h2>
-                        <p class="fxt-description">Log In To Earn Unlimited bounce</p>
-                        <form action="{{ route('login') }}" method="POST">
-                            @csrf
-                            <div class="form-group">
-                                <label for="email" class="fxt-label">Email Address</label>
-                                <input type="email" id="email" class="form-control" name="email"
-                                    placeholder="Enter your email" required="required">
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="fxt-label">Password</label>
-                                <input id="password" type="password" class="form-control" name="password"
-                                    placeholder="Enter Password" required="required">
-                            </div>
-                            <div class="form-group">
-                                <a href="#" class="fxt-switcher-text">Forgot Password</a>
-                            </div>
-                            <div class="form-group mb-3">
-                                <button type="submit" class="fxt-btn-fill">Log in</button>
-                            </div>
-                        </form>
+                        <h2 class="fxt-page-title">Verified</h2>
+                        <p class="fxt-description">{{ $verificationText->text }}</p>
+                        <div class="form-group mb-3">
+                            <a href="{{ route('Welcome') }}" class="fxt-btn-fill text-center">Home</a>
+                        </div>
                     </div>
                 </div>
             </div>
