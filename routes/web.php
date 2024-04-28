@@ -1,11 +1,10 @@
 <?php
 
+use App\Http\Controllers\Landingpage;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('Welcome',[Landingpage::class,'index'])->name('Welcome');
 
 
 Route::middleware('auth')->group(function () {

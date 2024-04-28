@@ -53,7 +53,7 @@
                     <div class="fxt-inner-wrap fxt-opacity fxt-transition-delay-13">
                         <h2 class="fxt-page-title">Plans</h2>
                         <p class="fxt-description">Choose Your Plan and Start Earning</p>
-                        <form action="{{ route('register') }}" method="POST">
+                        <form action="{{ route('Buy.Plan') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="plan_name" class="fxt-label">Select Plan</label>
@@ -70,7 +70,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="account" class="fxt-label">Account No:</label>
-                                <input id="account" type="text" class="form-control" name="account"
+                                <input id="account" type="number" class="form-control" name="account"
                                     placeholder="Your Account Number" required="required">
                             </div>
                             <div class="form-group">
@@ -84,6 +84,12 @@
                             </div>
                             <div class="form-group mb-3">
                                 <button type="submit" class="fxt-btn-fill">Submit</button>
+                            </div>
+                        </form>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-danger">Logout</button>
                             </div>
                         </form>
                     </div>

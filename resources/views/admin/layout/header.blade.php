@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="{{ asset('asset/images/favicon.png') }}">
     <!-- Page Title Here -->
-    <title>{{ env('APP_NAME') }} | User Dashboard</title>
+    <title>{{ env('APP_NAME') }} | Admin Dashboard</title>
     @yield('links')
     <!-- Style css -->
     <link href="{{ asset('asset/css/style.css') }}" rel="stylesheet">
