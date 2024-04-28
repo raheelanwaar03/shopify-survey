@@ -45,7 +45,7 @@ class UserMangementController extends Controller
         // getting user package
         $userPlan = $user->trxIds->plan_name;
 
-        if ($userPlan == 'silver') {
+        if ($userPlan == 'Silver') {
             $firstUpliner = User::where('user_id', $user->referral)->where('status', 'approved')->first();
             if ($firstUpliner != '') {
                 $firstUpliner->balance += $silver;
@@ -125,7 +125,7 @@ class UserMangementController extends Controller
             }
         }
 
-        if ($userPlan == 'gold') {
+        if ($userPlan == 'Gold') {
             $firstUpliner = User::where('user_id', $user->referral)->where('status', 'approved')->first();
             if ($firstUpliner != '') {
                 $firstUpliner->balance += $gold;
