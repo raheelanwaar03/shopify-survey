@@ -3,6 +3,8 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Models\user\BuyPlan;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -10,6 +12,17 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
+
+
+    protected $primaryKey = 'id';
+
+    function trxIds()
+    {
+        return $this->hasOne(BuyPlan::class, 'user_id');
+    }
+
+
+
 
     /**
      * The attributes that are mass assignable.

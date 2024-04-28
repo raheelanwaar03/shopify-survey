@@ -13,12 +13,13 @@ return new class extends Migration
     {
         Schema::create('buy_plans', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('plan_name');
             $table->string('user_name');
             $table->string('trx');
             $table->string('account');
             $table->string('img');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

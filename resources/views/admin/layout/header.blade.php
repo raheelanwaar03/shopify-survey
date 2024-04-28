@@ -107,35 +107,19 @@
                         </ul>
 
                     </li>
-                    <!-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-050-info"></i>
-                            <span class="nav-text">Apps</span>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-050-info text-white"></i>
+                            <span class="nav-text text-white">Users</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="app-profile.html">Profile</a></li>
-                            <li><a href="post-details.html">Post Details</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="email-compose.html">Compose</a></li>
-                                    <li><a href="email-inbox.html">Inbox</a></li>
-                                    <li><a href="email-read.html">Read</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="app-calender.html">Calendar</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Shop</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="ecom-product-grid.html">Product Grid</a></li>
-                                    <li><a href="ecom-product-list.html">Product List</a></li>
-                                    <li><a href="ecom-product-detail.html">Product Details</a></li>
-                                    <li><a href="ecom-product-order.html">Order</a></li>
-                                    <li><a href="ecom-checkout.html">Checkout</a></li>
-                                    <li><a href="ecom-invoice.html">Invoice</a></li>
-                                    <li><a href="ecom-customers.html">Customers</a></li>
-                                </ul>
+                            <li><a href="{{ route('Admin.All.Users') }}" class="text-white">All Users</a></li>
+                            <li><a href="{{ route('Admin.Pending.Users') }}" class="text-white">Pending Users</a></li>
+                            <li><a href="{{ route('Admin.Approved.Users') }}" class="text-white">Approved Users</a></li>
+                            <li><a href="{{ route('Admin.Rejected.Users') }}" class="text-white">Rejected Users</a>
                             </li>
                         </ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <!-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-041-graph"></i>
                             <span class="nav-text">Charts</span>
                         </a>

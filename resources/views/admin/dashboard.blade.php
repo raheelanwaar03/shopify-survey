@@ -123,20 +123,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-12">
-                        <div class="card coin-card">
-                            <div class="card-body d-sm-flex d-block align-items-center">
-                                <span class="coin-icon">
-                                    <i class="fa-regular fa-copy copy-icon" onclick="copyReferralLink()"
-                                        style="height: 25px;width: 25px;cursor: pointer;"></i>
-                                </span>
-                                <div>
-                                    <h3 class="text-white">Your Referral Link</h3>
-                                    <p id="link">{{ route('register', ['referral' => Auth::user()->user_id]) }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
