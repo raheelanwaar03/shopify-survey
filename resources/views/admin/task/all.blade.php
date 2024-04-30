@@ -38,7 +38,7 @@
                                                 <td>{{ $item->earning }}</td>
                                                 <td>{{ $item->link }}</td>
                                                 <td>
-                                                    <img src="{{ asset('tasks/', $task->photo) }}" height="50px"
+                                                    <img src="{{ asset('tasks/'. $item->photo) }}" height="50px"
                                                         width="50px" class="img-fluid">
                                                 </td>
                                                 <td>
