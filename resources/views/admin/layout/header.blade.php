@@ -135,7 +135,10 @@
                         <ul aria-expanded="false">
                             <li><a href="{{ route('Admin.Add.Lucky.Product') }}" class="text-white">Add Lucky
                                     Product</a></li>
-                            <li><a href="{{ route('Admin.Add.Lucky.Product') }}" class="text-white">All Products</a>
+                            <li><a href="{{ route('Admin.Add.Winner') }}" class="text-white">Add Winner</a>
+                            </li>
+                            <li><a href="{{ route('Admin.All.Lucky.Product') }}" class="text-white">Products &
+                                    Winner</a>
                             </li>
                         </ul>
                     </li>

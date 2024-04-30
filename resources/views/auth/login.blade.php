@@ -35,7 +35,7 @@
             <div class="fxt-heading-content">
                 <div class="fxt-inner-wrap fxt-transformX-R-50 fxt-transition-delay-3">
                     <div class="fxt-transformX-R-50 fxt-transition-delay-10">
-                        <a href="{{ route('login') }}" class="fxt-logo"><img src="{{ asset('auth/img/logo-33.png') }}"
+                        <a href="{{ route('login') }}" class="fxt-logo"><img src="{{ asset('asset/images/logo.png') }}"
                                 alt="Logo"></a>
                     </div>
                     <div class="fxt-transformX-R-50 fxt-transition-delay-10">

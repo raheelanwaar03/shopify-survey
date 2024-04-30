@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\admin\LuckyDraw;
+use App\Models\admin\Winner;
 use Illuminate\Http\Request;
 
 class LuckyDrawController extends Controller
@@ -32,6 +33,27 @@ class LuckyDrawController extends Controller
     public function allLuckyProducts()
     {
         $product = LuckyDraw::get();
-        return view('admin.luckydraw.all', compact('product'));
+        $winner = Winner::get();
+        return view('admin.luckydraw.all', compact('product', 'winner'));
+    }
+
+    public function addWinner()
+    {
+        return view('admin.luckydraw.winer');
+    }
+
+
+    public function storeWinner(Request $request)
+    {
+        $image = $request->image;
+        $imageName = rand(111111, 999999) . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('winner'), $imageName);
+
+        $winner = new Winner();
+        $winner->winner_name = $request->winner_name;
+        $winner->item = $request->item;
+        $winner->image = $imageName;
+        $winner->save();
+        return redirect(route('Admin.All.Lucky.Product'))->with('success', 'Winner Added');
     }
 }

@@ -29,4 +29,6 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::get('Add/LuckyDraw', [LuckyDrawController::class, 'luckyDraw'])->name('Add.Lucky.Product');
     Route::post('Store/LuckyDraw', [LuckyDrawController::class, 'storeLuckyDraw'])->name('Store.Lucky.Product');
     Route::get('All/LuckyDraw/Products', [LuckyDrawController::class, 'allLuckyProducts'])->name('All.Lucky.Product');
+    Route::get('Add/LuckyDraw/Winner', [LuckyDrawController::class, 'addWinner'])->name('Add.Winner');
+    Route::post('Store/LuckyDraw/Winner', [LuckyDrawController::class, 'storeWinner'])->name('Store.Lucky.Draw.Winner');
 });
