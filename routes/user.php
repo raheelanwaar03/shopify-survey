@@ -19,4 +19,5 @@ Route::name('User.')->prefix('User')->middleware('auth', 'user')->group(function
     // lucky Draw
     Route::get('Lucky/Draw',[TeamMemberController::class,'luckyDraw'])->name('Lucky.Draw');
     Route::get('Invest/Lucky/Draw/{id}',[TeamMemberController::class,'investLucky'])->name('Invest.Lucky.Draw');
+    Route::get('Lucky/Draw/Winner',[TeamMemberController::class,'winner'])->name('Lucky.Winner');
 });

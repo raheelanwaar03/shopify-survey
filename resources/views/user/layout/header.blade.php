@@ -126,7 +126,7 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="{{ route('User.Lucky.Draw') }}" class="text-white">Lucky Draw</a></li>
-                            <li><a href="#" class="text-white">Winners</a></li>
+                            <li><a href="{{ route('User.Lucky.Winner') }}" class="text-white">Winner</a></li>
                         </ul>
                     </li>
                     <!-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use App\Models\admin\LuckyDraw;
+use App\Models\admin\Winner;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -33,5 +34,11 @@ class TeamMemberController extends Controller
             $user->save();
             return redirect()->back()->with('success', 'Winner will be announce in few days');
         }
+    }
+
+    public function winner()
+    {
+        $winner = Winner::first();
+        return view('user.luck.winer', compact('winner'));
     }
 }
