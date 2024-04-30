@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\admin\AdminPlansController;
+use App\Http\Controllers\admin\LuckyDrawController;
 use App\Http\Controllers\admin\TaskController;
 use App\Http\Controllers\admin\UserMangementController;
 use Illuminate\Support\Facades\Route;
@@ -24,4 +25,8 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::get('Add/Task', [TaskController::class, 'addTask'])->name('Add.Task');
     Route::post('Store/Task', [TaskController::class, 'storeTask'])->name('Store.Task');
     Route::get('All/Task', [TaskController::class, 'allTask'])->name('All.Task');
+    // Add Product into the LuckyDraw
+    Route::get('Add/LuckyDraw', [LuckyDrawController::class, 'luckyDraw'])->name('Add.Lucky.Product');
+    Route::post('Store/LuckyDraw', [LuckyDrawController::class, 'storeLuckyDraw'])->name('Store.Lucky.Product');
+    Route::get('All/LuckyDraw/Products', [LuckyDrawController::class, 'allLuckyProducts'])->name('All.Lucky.Product');
 });

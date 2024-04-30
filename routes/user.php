@@ -16,4 +16,7 @@ Route::name('User.')->prefix('User')->middleware('auth', 'user')->group(function
     // All Tasks
     Route::get('New/Tasks', [UserDashboardController::class, 'tasks'])->name('new.tasks');
     Route::get('Get/Tasks/Reward/{id}', [UserDashboardController::class, 'getReward'])->name('Get.task.Reward');
+    // lucky Draw
+    Route::get('Lucky/Draw',[TeamMemberController::class,'luckyDraw'])->name('Lucky.Draw');
+    Route::get('Invest/Lucky/Draw/{id}',[TeamMemberController::class,'investLucky'])->name('Invest.Lucky.Draw');
 });
