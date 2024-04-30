@@ -21,14 +21,20 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::get('Add/Plan', [AdminPlansController::class, 'add'])->name('Add.Plan');
     Route::post('Store/Plan', [AdminPlansController::class, 'store'])->name('Store.Plan');
     Route::get('All/Plan', [AdminPlansController::class, 'all'])->name('All.Plan');
+    Route::get('Delete/Plan/{id}', [AdminPlansController::class, 'deletePlan'])->name('Delete.Plan');
+    Route::get('Edit/Plan/{id}', [AdminPlansController::class, 'editPlan'])->name('Edit.Plan');
+    Route::post('Update/Plan/{id}', [AdminPlansController::class, 'updatePlan'])->name('Update.Plan');
     // Add Task
     Route::get('Add/Task', [TaskController::class, 'addTask'])->name('Add.Task');
     Route::post('Store/Task', [TaskController::class, 'storeTask'])->name('Store.Task');
     Route::get('All/Task', [TaskController::class, 'allTask'])->name('All.Task');
+    Route::get('Delete/Task/{id}', [TaskController::class, 'deleteTask'])->name('Delete.Task');
     // Add Product into the LuckyDraw
     Route::get('Add/LuckyDraw', [LuckyDrawController::class, 'luckyDraw'])->name('Add.Lucky.Product');
     Route::post('Store/LuckyDraw', [LuckyDrawController::class, 'storeLuckyDraw'])->name('Store.Lucky.Product');
     Route::get('All/LuckyDraw/Products', [LuckyDrawController::class, 'allLuckyProducts'])->name('All.Lucky.Product');
+    Route::get('Delete/LuckyDraw/Products/{id}', [LuckyDrawController::class, 'deleteProducts'])->name('Delete.Lucky.Product');
     Route::get('Add/LuckyDraw/Winner', [LuckyDrawController::class, 'addWinner'])->name('Add.Winner');
     Route::post('Store/LuckyDraw/Winner', [LuckyDrawController::class, 'storeWinner'])->name('Store.Lucky.Draw.Winner');
+    Route::get('Delete/Winner/{id}', [LuckyDrawController::class, 'deleteWinner'])->name('Delete.Winner');
 });

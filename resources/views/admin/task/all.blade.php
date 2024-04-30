@@ -38,15 +38,13 @@
                                                 <td>{{ $item->earning }}</td>
                                                 <td>{{ $item->link }}</td>
                                                 <td>
-                                                    <img src="{{ asset('tasks/'. $item->photo) }}" height="50px"
+                                                    <img src="{{ asset('tasks/' . $item->photo) }}" height="50px"
                                                         width="50px" class="img-fluid">
                                                 </td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a href="#"
-                                                            class="btn btn-primary shadow btn-xs sharp me-1"><i
-                                                                class="fas fa-pencil-alt"></i></a>
-                                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i
+                                                        <a href="{{ route('Admin.Delete.Task',$item->id) }}"
+                                                            class="btn btn-danger shadow btn-xs sharp"><i
                                                                 class="fa fa-trash"></i></a>
                                                     </div>
                                                 </td>

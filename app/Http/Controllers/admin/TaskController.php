@@ -38,4 +38,13 @@ class TaskController extends Controller
         $task = Task::get();
         return view('admin.task.all', compact('task'));
     }
+
+    public function deleteTask($id)
+    {
+        $task = Task::find($id);
+        $task->delete();
+        return redirect()->back()->with('success','Task deleted');
+    }
+
+
 }

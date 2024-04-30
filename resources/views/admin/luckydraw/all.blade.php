@@ -36,7 +36,8 @@
                                                 </td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i
+                                                        <a href="{{ route('Admin.Delete.Lucky.Product',$item->id) }}"
+                                                            class="btn btn-danger shadow btn-xs sharp"><i
                                                                 class="fa fa-trash"></i></a>
                                                     </div>
                                                 </td>
@@ -77,7 +78,8 @@
                                                 </td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a href="#" class="btn btn-danger shadow btn-xs sharp"><i
+                                                        <a href="{{ route('Admin.Delete.Winner', $item->id) }}"
+                                                            class="btn btn-danger shadow btn-xs sharp"><i
                                                                 class="fa fa-trash"></i></a>
                                                     </div>
                                                 </td>

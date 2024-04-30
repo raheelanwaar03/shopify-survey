@@ -56,4 +56,18 @@ class LuckyDrawController extends Controller
         $winner->save();
         return redirect(route('Admin.All.Lucky.Product'))->with('success', 'Winner Added');
     }
+
+    public function deleteProducts($id)
+    {
+        $product = LuckyDraw::find($id);
+        $product->delete();
+        return redirect(route('Admin.All.Lucky.Product'))->with('success', 'Product Deleted');
+    }
+
+    public function deleteWinner($id)
+    {
+        $winner = Winner::find($id);
+        $winner->delete();
+        return redirect()->back()->with('success', 'Winner Deleted');
+    }
 }
