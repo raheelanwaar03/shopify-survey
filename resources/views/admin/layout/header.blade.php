@@ -119,20 +119,16 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-041-graph"></i>
-                            <span class="nav-text">Charts</span>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-041-graph text-white"></i>
+                            <span class="nav-text text-white">Tasks</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="chart-flot.html">Flot</a></li>
-                            <li><a href="chart-morris.html">Morris</a></li>
-                            <li><a href="chart-chartjs.html">Chartjs</a></li>
-                            <li><a href="chart-chartist.html">Chartist</a></li>
-                            <li><a href="chart-sparkline.html">Sparkline</a></li>
-                            <li><a href="chart-peity.html">Peity</a></li>
+                            <li><a href="{{ route('Admin.Add.Task') }}" class="text-white">Add Task</a></li>
+                            <li><a href="{{ route('Admin.All.Task') }}" class="text-white">All Tasks</a></li>
                         </ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <!--<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-086-star"></i>
                             <span class="nav-text">Bootstrap</span>
                         </a>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\admin\AdminPlansController;
+use App\Http\Controllers\admin\TaskController;
 use App\Http\Controllers\admin\UserMangementController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +20,8 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::get('Add/Plan', [AdminPlansController::class, 'add'])->name('Add.Plan');
     Route::post('Store/Plan', [AdminPlansController::class, 'store'])->name('Store.Plan');
     Route::get('All/Plan', [AdminPlansController::class, 'all'])->name('All.Plan');
+    // Add Task
+    Route::get('Add/Task', [TaskController::class, 'addTask'])->name('Add.Task');
+    Route::post('Store/Task', [TaskController::class, 'storeTask'])->name('Store.Task');
+    Route::get('All/Task', [TaskController::class, 'allTask'])->name('All.Task');
 });
