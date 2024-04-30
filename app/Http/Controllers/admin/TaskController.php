@@ -23,6 +23,7 @@ class TaskController extends Controller
 
         $task = new Task();
         $task->title = $request->title;
+        $task->des = $request->des;
         $task->earning = $request->earning;
         $task->plan = $request->plan;
         $task->level = $request->level;

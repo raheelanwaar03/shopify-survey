@@ -19,6 +19,10 @@
                                         placeholder="Task Title">
                                 </div>
                                 <div class="form-group">
+                                    <label for="des" class="form-label">Task Description</label>
+                                    <textarea name="des" id="des" cols="5" rows="5" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
                                     <label for="invest" class="form-label">Earning</label>
                                     <input type="number" name="earning" id="invest" class="form-control"
                                         placeholder="Task Earning which will users get">
@@ -55,7 +59,7 @@
                                     <input type="file" name="photo" id="Profit" class="form-control">
                                 </div>
                                 <div class="m-3">
-                                    <button class="btn btn-primary" type="submit">Add</button>
+                                    <button class="btn btn-success" type="submit">Add</button>
                                 </div>
                             </form>
                         </div>

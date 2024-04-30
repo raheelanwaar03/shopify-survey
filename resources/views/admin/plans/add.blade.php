@@ -34,7 +34,7 @@
                                         placeholder="Plan expire">
                                 </div>
                                 <div class="m-3">
-                                    <button class="btn btn-primary" type="submit">Add</button>
+                                    <button class="btn btn-success" type="submit">Add</button>
                                 </div>
                             </form>
                         </div>

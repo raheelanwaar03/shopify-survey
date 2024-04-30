@@ -11,15 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tasks', function (Blueprint $table) {
+        Schema::create('today_reward_checks', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('des');
-            $table->string('earning');
-            $table->string('level');
-            $table->string('plan');
-            $table->string('link');
-            $table->string('photo');
+            $table->string('user_id');
+            $table->string('task_id');
+            $table->string('price');
             $table->timestamps();
         });
     }
@@ -29,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tasks');
+        Schema::dropIfExists('today_reward_checks');
     }
 };

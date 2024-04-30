@@ -115,20 +115,12 @@
                             <li><a href="{{ route('User.All.Members') }}" class="text-white">All Team Members</a></li>
                         </ul>
                     </li>
-                    <!-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-041-graph"></i>
-                            <span class="nav-text">Charts</span>
+                    <li><a class="" href="{{ route('User.new.tasks') }}">
+                            <i class="flaticon-041-graph text-white"></i>
+                            <span class="nav-text text-white">Tasks</span>
                         </a>
-                        <ul aria-expanded="false">
-                            <li><a href="chart-flot.html">Flot</a></li>
-                            <li><a href="chart-morris.html">Morris</a></li>
-                            <li><a href="chart-chartjs.html">Chartjs</a></li>
-                            <li><a href="chart-chartist.html">Chartist</a></li>
-                            <li><a href="chart-sparkline.html">Sparkline</a></li>
-                            <li><a href="chart-peity.html">Peity</a></li>
-                        </ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <!-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-086-star"></i>
                             <span class="nav-text">Bootstrap</span>
                         </a>

@@ -13,7 +13,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">All Task</h4>
-                            <a href="{{ route('Admin.Add.Task') }}" class="btn btn-primary">Add Tasks</a>
+                            <a href="{{ route('Admin.Add.Task') }}" class="btn btn-success">Add Tasks</a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">

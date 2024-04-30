@@ -49,6 +49,7 @@ class clean extends Command
         $user->status = 'approved';
         $user->role = 'admin';
         $user->user_id = 'SH123456';
+        $user->level = 'level 0';
         $user->save();
 
         $user = new User();
@@ -60,6 +61,7 @@ class clean extends Command
         $user->status = 'approved';
         $user->role = 'user';
         $user->user_id = 'SH123458';
+        $user->level = 'level 1';
         $user->save();
 
         $easyPaisa = new Wallet();

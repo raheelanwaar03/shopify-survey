@@ -13,7 +13,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">All Plans</h4>
-                            <a href="{{ route('Admin.Add.Plan') }}" class="btn btn-primary">Add Plans</a>
+                            <a href="{{ route('Admin.Add.Plan') }}" class="btn btn-success">Add Plans</a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
