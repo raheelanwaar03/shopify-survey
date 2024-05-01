@@ -98,12 +98,12 @@
                         </a>
                     </li>
                     <li><a class="" href="{{ route('User.new.tasks') }}">
-                            <i class="flaticon-041-graph text-white"></i>
+                            <i class="fa-solid fa-briefcase text-white" style="font-size: 20px"></i>
                             <span class="nav-text text-white">Tasks</span>
                         </a>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="fa-solid fa-gear fw-bold text-white"></i>
+                            <i class="fa-solid fa-wallet text-white" style="font-size: 20px"></i>
                             <span class="nav-text text-white">Withdraw</span>
                         </a>
                         <ul aria-expanded="false">
@@ -113,7 +113,7 @@
 
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-050-info text-white"></i>
+                            <i class="fa-solid fa-user-plus text-white" style="font-size: 20px"></i>
                             <span class="nav-text text-white">Team</span>
                         </a>
                         <ul aria-expanded="false">
@@ -129,77 +129,6 @@
                             <li><a href="{{ route('User.Lucky.Winner') }}" class="text-white">Winner</a></li>
                         </ul>
                     </li>
-                    <!-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-045-heart"></i>
-                            <span class="nav-text">Plugins</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="uc-select2.html">Select 2</a></li>
-                            <li><a href="uc-nestable.html">Nestedable</a></li>
-                            <li><a href="uc-noui-slider.html">Noui Slider</a></li>
-                            <li><a href="uc-sweetalert.html">Sweet Alert</a></li>
-                            <li><a href="uc-toastr.html">Toastr</a></li>
-                            <li><a href="map-jqvmap.html">Jqv Map</a></li>
-                            <li><a href="uc-lightgallery.html">Light Gallery</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-045-heart"></i>
-                            <span class="nav-text">Widget</span>
-                        </a>
-                        <ul aria-expanded="false" class="mm-collapse" style="">
-                            <li><a href="widget-card.html">Widget Card</a></li>
-                            <li><a href="widget-chart.html">widget Chart</a></li>
-                            <li><a href="widget-list.html">Widget List</a></li>
-
-                        </ul>
-                    </li>
-
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-072-printer"></i>
-                            <span class="nav-text">Forms</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="form-element.html">Form Elements</a></li>
-                            <li><a href="form-wizard.html">Wizard</a></li>
-                            <li><a href="form-ckeditor.html">CkEditor</a></li>
-                            <li><a href="form-pickers.html">Pickers</a></li>
-                            <li><a href="form-validation.html">Form Validate</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-043-menu"></i>
-                            <span class="nav-text">Table</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
-                            <li><a href="table-datatable-basic.html">Datatable</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-022-copy"></i>
-                            <span class="nav-text">Pages</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="page-login.html">Login<span
-                                        class="badge badge-xs badge-success ms-3">Update</span></a></li>
-                            <li><a href="page-register.html">Register<span
-                                        class="badge badge-xs badge-success ms-3">Update</span></a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error<span
-                                        class="badge badge-xs badge-success ms-3">Upadte</span></a>
-                                <ul aria-expanded="false">
-                                    <li><a href="page-error-400.html">Error 400</a></li>
-                                    <li><a href="page-error-403.html">Error 403</a></li>
-                                    <li><a href="page-error-404.html">Error 404</a></li>
-                                    <li><a href="page-error-500.html">Error 500</a></li>
-                                    <li><a href="page-error-503.html">Error 503</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="page-lock-screen.html">Lock Screen<span
-                                        class="badge badge-xs badge-success ms-3">Update</span></a></li>
-                            <li><a href="empty-page.html">Empty Page</a></li>
-                        </ul>
-                    </li> -->
                     <li>
                         <a>
                             <form action="{{ route('logout') }}" method="POST">
