@@ -6,6 +6,7 @@ use App\Http\Controllers\admin\LuckyDrawController;
 use App\Http\Controllers\admin\SettingController;
 use App\Http\Controllers\admin\TaskController;
 use App\Http\Controllers\admin\UserMangementController;
+use App\Http\Controllers\admin\WithdrawController;
 use Illuminate\Support\Facades\Route;
 
 Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(function () {
@@ -52,5 +53,10 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::post('Update/Contact/{id}', [SettingController::class, 'updateContact'])->name('Update.Contact');
     Route::get('Edit/Level', [SettingController::class, 'editLevel'])->name('Edit.Level');
     Route::post('Update/Level/{id}', [SettingController::class, 'updateLevel'])->name('Update.Level');
-
+    // withdraw
+    Route::get('Pending/Withdraw', [WithdrawController::class, 'pendingWithdraw'])->name('Pending.Withdraw');
+    Route::get('Approved/Withdraw', [WithdrawController::class, 'approvedWithdraw'])->name('Approved.Withdraw');
+    Route::get('Rejected/Withdraw', [WithdrawController::class, 'rejectedWithdraw'])->name('Rejected.Withdraw');
+    Route::get('Make/Withdraw/Approve/{id}', [WithdrawController::class, 'makeApprove'])->name('Make.Withdraw.Approve');
+    Route::get('Make/Withdraw/Rejected/{id}', [WithdrawController::class, 'makeRejected'])->name('Make.Withdraw.Rejected');
 });

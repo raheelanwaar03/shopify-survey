@@ -116,7 +116,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title mt-2">Plan</h4>
                                     <div class="d-flex align-items-center mt-3 mb-2">
-                                        <h2 class="fs-38 mb-0 me-3">{{ $user->trxIds->plan_name ?? null }}</h2>
+                                        <h2 class="fs-38 mb-0 me-3">{{ $user->trxIds->plan_name ?? 'null' }}</h2>
                                     </div>
                                 </div>
                             </div>

@@ -98,7 +98,7 @@
                         </a>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                        <i class="flaticon-045-heart text-white"></i>
+                            <i class="flaticon-045-heart text-white"></i>
                             <span class="nav-text text-white">Plans</span>
                         </a>
                         <ul aria-expanded="false">
@@ -143,30 +143,33 @@
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon text-white" href="javascript:void()" aria-expanded="false">
-                        <i class="fa-solid fa-gear fw-bold text-white"></i>
+                            <i class="fa-solid fa-gear fw-bold text-white"></i>
                             <span class="nav-text text-white">Settings</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ route('Admin.Edit.Text') }}" class="text-white">Verification Text</a></li>
+                            <li><a href="{{ route('Admin.Edit.Text') }}" class="text-white">Verification Text</a>
+                            </li>
                             <li><a href="{{ route('Admin.Edit.Wallet') }}" class="text-white">Change Wallet</a></li>
-                            <li><a href="{{ route('Admin.Edit.Setting') }}" class="text-white">Withdraw Limit</a></li>
-                            <li><a href="{{ route('Admin.Edit.Contact') }}" class="text-white">Contact Details</a></li>
+                            <li><a href="{{ route('Admin.Edit.Setting') }}" class="text-white">Withdraw Limit</a>
+                            </li>
+                            <li><a href="{{ route('Admin.Edit.Contact') }}" class="text-white">Contact Details</a>
+                            </li>
                             <li><a href="{{ route('Admin.Edit.Level') }}" class="text-white">Level Setting</a></li>
                         </ul>
                     </li>
-                    <!--<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-045-heart"></i>
-                            <span class="nav-text">Widget</span>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-045-heart text-white"></i>
+                            <span class="nav-text text-white">Withdraw</span>
                         </a>
                         <ul aria-expanded="false" class="mm-collapse" style="">
-                            <li><a href="widget-card.html">Widget Card</a></li>
-                            <li><a href="widget-chart.html">widget Chart</a></li>
-                            <li><a href="widget-list.html">Widget List</a></li>
-
+                            <li><a href="{{ route('Admin.Pending.Withdraw') }}" class="text-white">Pending Withdraw</a>
+                                <li><a href="{{ route('Admin.Approved.Withdraw') }}" class="text-white">Approved Withdraw</a>
+                                    <li><a href="{{ route('Admin.Rejected.Withdraw') }}" class="text-white">Rejected Withdraw</a>
+                            </li>
                         </ul>
                     </li>
 
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <!--<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-072-printer"></i>
                             <span class="nav-text">Forms</span>
                         </a>
