@@ -14,7 +14,7 @@
                                 </svg>
                             </div>
                             <div>
-                                <h2 class="text-white invoice-num">2478</h2>
+                                <h2 class="text-white invoice-num">{{ auth()->user()->balance }}</h2>
                                 <span class="text-white fs-18">Balance</span>
                             </div>
                         </div>
@@ -33,8 +33,8 @@
 
                             </div>
                             <div>
-                                <h2 class="text-white invoice-num">983</h2>
-                                <span class="text-white fs-18">Paid User</span>
+                                <h2 class="text-white invoice-num">{{ approved_team() }}</h2>
+                                <span class="text-white fs-18">Team Members</span>
                             </div>
                         </div>
                     </div>
@@ -52,8 +52,8 @@
 
                             </div>
                             <div>
-                                <h2 class="text-white invoice-num">1256</h2>
-                                <span class="text-white fs-18">Unpaid User</span>
+                                <h2 class="text-white invoice-num">{{ pending_team() }}</h2>
+                                <span class="text-white fs-18">Unpaid Members</span>
                             </div>
                         </div>
                     </div>
@@ -69,8 +69,8 @@
 
                             </div>
                             <div>
-                                <h2 class="text-white invoice-num">652</h2>
-                                <span class="text-white fs-18">Referral Bouns</span>
+                                <h2 class="text-white invoice-num">{{ total_team() }}</h2>
+                                <span class="text-white fs-18">Total Team</span>
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                                     <div class="me-auto">
                                         <h4 class="card-title">Total Withdraw</h4>
                                         <div class="d-flex align-items-center">
-                                            <h2 class="fs-38 mb-0">98k</h2>
+                                            <h2 class="fs-38 mb-0">{{ total_withdraw() }}</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title">Pending Withdraw</h4>
                                     <div class="d-flex align-items-center">
-                                        <h2 class="fs-38">854</h2>
+                                        <h2 class="fs-38">{{ pending_withdraw() }}</h2>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title mt-2">Approved Withdraw</h4>
                                     <div class="d-flex align-items-center mt-3 mb-2">
-                                        <h2 class="fs-38 mb-0 me-3">456</h2>
+                                        <h2 class="fs-38 mb-0 me-3">{{ approved_withdraw() }}</h2>
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +116,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title mt-2">Plan</h4>
                                     <div class="d-flex align-items-center mt-3 mb-2">
-                                        <h2 class="fs-38 mb-0 me-3">silver</h2>
+                                        <h2 class="fs-38 mb-0 me-3">{{ $user->trxIds->plan_name ?? null }}</h2>
                                     </div>
                                 </div>
                             </div>

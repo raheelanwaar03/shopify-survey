@@ -13,7 +13,8 @@ class UserDashboardController extends Controller
 {
     public function index()
     {
-        return view('user.dashboard');
+        $user = User::where('id', auth()->user()->id)->with('trxIds')->first();
+        return view('user.dashboard',compact('user'));
     }
 
     public function tasks()
