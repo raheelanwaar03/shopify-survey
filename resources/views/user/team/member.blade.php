@@ -12,8 +12,8 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">All Team Members</h4>
-                            <h6>({{ total_team() }})</h6>
+                            <h4 class="card-title">Team Members ({{ total_team() }})</h4>
+                            <h5 class="card-title">{{ auth()->user()->level }}</h5>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
