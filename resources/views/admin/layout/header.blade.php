@@ -98,7 +98,7 @@
                         </a>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="fa-solid fa-gear fw-bold text-white"></i>
+                        <i class="flaticon-045-heart text-white"></i>
                             <span class="nav-text text-white">Plans</span>
                         </a>
                         <ul aria-expanded="false">
@@ -142,21 +142,19 @@
                             </li>
                         </ul>
                     </li>
-                    <!--<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-045-heart"></i>
-                            <span class="nav-text">Plugins</span>
+                    <li><a class="has-arrow ai-icon text-white" href="javascript:void()" aria-expanded="false">
+                        <i class="fa-solid fa-gear fw-bold text-white"></i>
+                            <span class="nav-text text-white">Settings</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="uc-select2.html">Select 2</a></li>
-                            <li><a href="uc-nestable.html">Nestedable</a></li>
-                            <li><a href="uc-noui-slider.html">Noui Slider</a></li>
-                            <li><a href="uc-sweetalert.html">Sweet Alert</a></li>
-                            <li><a href="uc-toastr.html">Toastr</a></li>
-                            <li><a href="map-jqvmap.html">Jqv Map</a></li>
-                            <li><a href="uc-lightgallery.html">Light Gallery</a></li>
+                            <li><a href="{{ route('Admin.Edit.Text') }}" class="text-white">Verification Text</a></li>
+                            <li><a href="{{ route('Admin.Edit.Wallet') }}" class="text-white">Change Wallet</a></li>
+                            <li><a href="{{ route('Admin.Edit.Setting') }}" class="text-white">Withdraw Limit</a></li>
+                            <li><a href="{{ route('Admin.Edit.Contact') }}" class="text-white">Contact Details</a></li>
+                            <li><a href="{{ route('Admin.Edit.Level') }}" class="text-white">Level Setting</a></li>
                         </ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <!--<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-045-heart"></i>
                             <span class="nav-text">Widget</span>
                         </a>

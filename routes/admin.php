@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\admin\AdminPlansController;
 use App\Http\Controllers\admin\LuckyDrawController;
+use App\Http\Controllers\admin\SettingController;
 use App\Http\Controllers\admin\TaskController;
 use App\Http\Controllers\admin\UserMangementController;
 use Illuminate\Support\Facades\Route;
@@ -37,4 +38,16 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::get('Add/LuckyDraw/Winner', [LuckyDrawController::class, 'addWinner'])->name('Add.Winner');
     Route::post('Store/LuckyDraw/Winner', [LuckyDrawController::class, 'storeWinner'])->name('Store.Lucky.Draw.Winner');
     Route::get('Delete/Winner/{id}', [LuckyDrawController::class, 'deleteWinner'])->name('Delete.Winner');
+    // settings
+    Route::get('Edit/Verification/Text', [SettingController::class, 'verificationText'])->name('Edit.Text');
+    Route::post('Update/Verification/Text/{id}', [SettingController::class, 'updateText'])->name('Update.Text');
+    Route::get('Edit/Wallet', [SettingController::class, 'editWallet'])->name('Edit.Wallet');
+    Route::post('Update/Wallet/{id}', [SettingController::class, 'updateWallet'])->name('update.Wallet');
+    Route::get('Edit/Setting', [SettingController::class, 'editSetting'])->name('Edit.Setting');
+    Route::post('Update/Setting/{id}', [SettingController::class, 'updateSetting'])->name('Update.Setting');
+    Route::get('Edit/Contact', [SettingController::class, 'editContact'])->name('Edit.Contact');
+    Route::post('Update/Contact/{id}', [SettingController::class, 'updateContact'])->name('Update.Contact');
+    Route::get('Edit/Level', [SettingController::class, 'editLevel'])->name('Edit.Level');
+    Route::post('Update/Level/{id}', [SettingController::class, 'updateLevel'])->name('Update.Level');
+
 });
