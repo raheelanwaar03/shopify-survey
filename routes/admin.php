@@ -14,6 +14,9 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::get('/Pending/Users', [AdminDashboardController::class, 'pendingUsers'])->name('Pending.Users');
     Route::get('/Approved/Users', [AdminDashboardController::class, 'approvedUsers'])->name('Approved.Users');
     Route::get('/Recjected/Users', [AdminDashboardController::class, 'rejectedUsers'])->name('Rejected.Users');
+    Route::get('/Edit/User/{id}', [AdminDashboardController::class, 'editUser'])->name('Edit.User');
+    Route::post('/Update/User/{id}', [AdminDashboardController::class, 'updateUser'])->name('Update.User');
+    Route::post('/Update/User/Password/{id}', [AdminDashboardController::class, 'updatePassword'])->name('Update.Password');
     // Users Status
     Route::get('Make/User/Approved', [UserMangementController::class, 'approveUser'])->name('Make.User.Approved');
     Route::get('Make/User/Rejected', [UserMangementController::class, 'rejectUser'])->name('Make.User.Rejected');
