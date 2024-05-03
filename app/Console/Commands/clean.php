@@ -77,6 +77,7 @@ class clean extends Command
         $setting->max_amount = '500';
         $setting->planA = '10';
         $setting->planB = '20';
+        $setting->dollar_rate = '280';
         $setting->status = 1;
         $setting->save();
 
@@ -134,5 +135,11 @@ class clean extends Command
         $plan->profit = 'Unlimited';
         $plan->expire = 'LifeTime';
         $plan->save();
+
+        //
+
+
+
+
     }
 }

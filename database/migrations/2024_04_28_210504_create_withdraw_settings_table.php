@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('max_amount');
             $table->string('planA');
             $table->string('planB');
+            $table->string('dollar_rate');
             $table->string('status')->default('0');
             $table->timestamps();
         });

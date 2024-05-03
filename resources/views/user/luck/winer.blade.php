@@ -18,7 +18,11 @@
             <div class="row text-center">
                 <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{ asset('winner/' . $winner->image) }}" alt="Card image cap">
+                        @if ($winner == null)
+                            <h4>No Winner Yet!</h4>
+                        @else
+                            <img class="card-img-top" src="{{ asset('winner/' . $winner->image) }}" alt="Card image cap">
+                        @endif
                     </div>
                 </div>
             </div>

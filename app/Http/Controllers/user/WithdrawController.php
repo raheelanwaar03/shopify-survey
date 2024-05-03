@@ -11,7 +11,11 @@ class WithdrawController extends Controller
 {
     public function apply()
     {
-        return view('user.withdraw.apply');
+        $setting = WithdrawSetting::where('status', 1)->first();
+        // withdrawable
+        $withdrawAble = $setting->dollar_rate * auth()->user()->balance;
+
+        return view('user.withdraw.apply', compact('setting', 'withdrawAble'));
     }
 
     public function all()
@@ -22,12 +26,16 @@ class WithdrawController extends Controller
 
     public function storeWithdraw(Request $request)
     {
+        $setting = WithdrawSetting::where('status', 1)->first();
+        // withdrawable
+        $withdrawAble = $setting->dollar_rate * auth()->user()->balance;
+
         $request_amount = $request->amount;
-        if (auth()->user()->balance == null) {
+        if ($withdrawAble == null) {
             return redirect()->route('User.Dashboard')->with('error', 'Empty Balance');
         }
 
-        if (auth()->user()->balance < $request_amount) {
+        if ($withdrawAble < $request_amount) {
             return redirect()->back()->with('error', 'Less Balance');
         }
 
