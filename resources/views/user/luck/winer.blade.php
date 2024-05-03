@@ -10,7 +10,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center">The Lucky winner is {{ $winner->winner_name }}</h2>
+                    <h2 class="text-center">The Lucky winner is {{ $winner->winner_name ?? 'Not Annouce Yet!' }}</h2>
                     <h5 class="text-center">Don't lose hope you can also win <a href="{{ route('User.Lucky.Draw') }}">Try
                             it.</a></h5>
                 </div>
