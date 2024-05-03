@@ -18,7 +18,7 @@
   <meta name="description" content="New DiscreteM5 Theme HTML Template - Download Now!">
 
 
-  <title>DiscreteM5 Theme Small Business Website Demo</title>
+  <title>{{ env('APP_NAME') }} | Welcome to the new universe of earning</title>
   <link rel="stylesheet" href="{{ asset('land/web/mobirise-icons2/mobirise2.css') }}">
   <link rel="stylesheet" href="{{ asset('land/bootstrap/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('land/bootstrap/css/bootstrap-grid.min.css') }}">
@@ -43,7 +43,7 @@
         <div class="container">
             <div class="navbar-brand">
 
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-primary display-7" href="https://mobiri.se/">DiscreteM5</a></span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-primary display-7" href="#">{{ env('APP_NAME') }}</a></span>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="hamburger">
@@ -54,19 +54,19 @@
                 </div>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-primary display-4" href="https://mobiri.se/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="https://mobiri.se/">Features</a>
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-primary display-4" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="#">Features</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="https://mobiri.se/">Contacts</a>
+                    <li class="nav-item"><a class="nav-link link text-primary display-4" href="#">Contacts</a>
                     </li></ul>
                 <div class="icons-menu">
-                    <a class="iconfont-wrapper" href="https://mobiri.se/" target="_blank">
+                    <a class="iconfont-wrapper" href="#" target="_blank">
                         <span class="p-2 mbr-iconfont socicon-facebook socicon"></span>
                     </a>
-                    <a class="iconfont-wrapper" href="https://mobiri.se/" target="_blank">
+                    <a class="iconfont-wrapper" href="#" target="_blank">
                         <span class="p-2 mbr-iconfont socicon-twitter socicon"></span>
                     </a>
-                    <a class="iconfont-wrapper" href="https://mobiri.se/" target="_blank">
+                    <a class="iconfont-wrapper" href="#" target="_blank">
                         <span class="p-2 mbr-iconfont socicon-instagram socicon"></span>
                     </a>
 
@@ -79,11 +79,6 @@
 
 <section data-bs-version="5.1" class="header3 cid-tBnM9yQwvx" id="header03-2">
 
-
-
-
-
-
     <div class="container">
         <div class="row align-left">
             <div class="col-12 m-auto col-lg-7 pb-5">
@@ -93,8 +88,8 @@
                 <p class="mbr-text mbr-fonts-style display-7">
                     Lorem ipsum dolor sit amet consecte adipiscing. <br>Integer in enim libero
                     commodo eleifend.</p>
-                <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="https://mobiri.se/">About Us</a>
-                    <a class="btn btn-white display-4" href="https://mobiri.se/">Read More</a></div>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="#">About Us</a>
+                    <a class="btn btn-white display-4" href="#">Read More</a></div>
             </div>
             <div class="col-lg-5">
                 <img src="{{ asset('land/images/features4.jpg') }}') }}" alt="Mobirise Website Builder">
@@ -310,8 +305,8 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet dui posuere, ullamcorper
                     lacus in, tincidunt nulla. Aliquam porttitor elit sit amet arcu bibendum bibendum. Aenean dui
                     odio,&nbsp;</p>
-                <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-4" href="https://mobiri.se/">Get
-                        Started</a> <a class="btn btn-secondary display-4" href="https://mobiri.se/">Read More</a></div>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-4" href="#">Get
+                        Started</a> <a class="btn btn-secondary display-4" href="#">Read More</a></div>
             </div>
         </div>
     </div>
@@ -548,7 +543,7 @@
                             adipiscing elit. Vivamus lobortis and sapien. Etiam ante sapien viverra consequat viverra
                             venenatis.&nbsp;</p>
 
-                        <div class="mbr-section-btn mb-4"><a href="https://mobiri.se/" class="btn btn-primary display-4">Get started</a></div>
+                        <div class="mbr-section-btn mb-4"><a href="#" class="btn btn-primary display-4">Get started</a></div>
 
                         <hr>
 
@@ -583,7 +578,7 @@
                             adipiscing elit. Vivamus lobortis and sapien. Etiam ante sapien viverra consequat viverra
                             venenatis.<br> </p>
 
-                        <div class="mbr-section-btn mb-4"><a href="https://mobiri.se/" class="btn btn-primary display-4">Get started</a></div>
+                        <div class="mbr-section-btn mb-4"><a href="#" class="btn btn-primary display-4">Get started</a></div>
 
                         <hr>
 
@@ -618,7 +613,7 @@
                             adipiscing elit. Vivamus lobortis and sapien. Etiam ante sapien viverra consequat viverra
                             venenatis. </p>
 
-                        <div class="mbr-section-btn mb-4"><a href="https://mobiri.se/" class="btn btn-primary display-4">Get started</a></div>
+                        <div class="mbr-section-btn mb-4"><a href="#" class="btn btn-primary display-4">Get started</a></div>
 
                         <hr>
 
@@ -720,7 +715,7 @@
                 <h1 class="mbr-section-title mbr-fonts-style mb-5 display-2">Let's Work Together</h1>
 
 
-                <div class="mbr-section-btn mt-3"><a class="btn btn-white display-4" href="https://mobiri.se/">Contact Us</a>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-white display-4" href="#">Contact Us</a>
                 </div>
             </div>
             <div class="col-lg-6 mt-5">
