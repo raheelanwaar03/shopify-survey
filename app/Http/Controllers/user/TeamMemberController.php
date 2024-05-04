@@ -24,18 +24,9 @@ class TeamMemberController extends Controller
         return view('user.luck.draw', compact('luck', 'wallet'));
     }
 
-    public function investLucky($id)
+    public function investLucky()
     {
-        $luck = LuckyDraw::find($id);
-        $user = User::where('id', auth()->user()->id)->first();
-        // checking balance
-        if ($user->balance < $luck->invest) {
-            return redirect()->back()->with('error', 'You have not enough balance');
-        } else {
-            $user->balance -= $luck->invest;
-            $user->save();
-            return redirect()->back()->with('success', 'Winner will be announce in few days');
-        }
+        return redirect()->back()->with('success', 'You applied successfully! Winner will be announce soon.');
     }
 
     public function winner()

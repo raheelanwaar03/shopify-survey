@@ -1,6 +1,6 @@
 <div class="footer">
     <div class="copyright">
-        <p>Copyright © Designed &amp; Developed by <a href="https://raheelanwaar.com/" target="_blank">Shopify</a> 2024
+        <p>Copyright © Designed &amp; Developed by <a href="{{ env('APP_URL') }}" target="_blank">Shopify</a> 2024
         </p>
     </div>
 </div>
