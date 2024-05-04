@@ -5,15 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="Mobirise v5.6.4, mobirise.com">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image:src" content="">
-    <meta property="og:image" content="">
-    <meta name="twitter:title" content="DiscreteM5 Theme Small Business Website Demo">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="shortcut icon" href="{{ asset('land/images/logo.png') }}" type="image/x-icon">
-    <meta name="description" content="New DiscreteM5 Theme HTML Template - Download Now!">
-
+    <link rel="shortcut icon" href="{{ asset('logo.png') }}" type="image/x-icon">
 
     <title>{{ env('APP_NAME') }} | Welcome to the new universe of earning</title>
     <link rel="stylesheet" href="{{ asset('land/web/mobirise-icons2/mobirise2.css') }}">
@@ -23,7 +15,6 @@
     <link rel="stylesheet" href="{{ asset('land/dropdown/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('land/socicon/css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('land/theme/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('land/recaptcha.css') }}">
     <link rel="preload"
         href="https://fonts.googleapis.com/css?family=Anuphan:100,200,300,400,500,600,700&amp;display=swap"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -35,12 +26,11 @@
     <link rel="stylesheet" href="{{ asset('land/mobirise/css/mbr-additional.css') }}" type="text/css">
 
 
-
-
 </head>
 
 <body>
 
+    <x-alert/>
     <section data-bs-version="5.1" class="menu menu1 cid-tBnM1aClNb" once="menu" id="menu01-0">
 
         <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
@@ -48,7 +38,7 @@
                 <div class="navbar-brand">
 
                     <span class="navbar-caption-wrap"><a class="navbar-caption text-primary display-7"
-                            href="#">{{ env('APP_NAME') }}</a></span>
+                            href="{{ route('Welcome') }}"><h3>{{ env('APP_NAME') }}</h3></a></span>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
                     data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"
@@ -101,9 +91,8 @@
 
                     <p class="mbr-text mbr-fonts-style display-7">
                         Best earning platform to earn daily profit and win expensive itesm in very cheep.</p>
-                    <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="#">About
-                            Us</a>
-                        <a class="btn btn-white display-4" href="#">Read More</a>
+                    <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="{{ route('login') }}">Login</a>
+                        <a class="btn btn-white display-4" href="{{ route('register') }}">Register</a>
                     </div>
                 </div>
                 <div class="col-lg-5">

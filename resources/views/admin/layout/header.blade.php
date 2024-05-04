@@ -10,7 +10,7 @@
     <meta name="robots" content="">
     <meta name="keywords" content="Earning Platform">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="{{ asset('asset/images/favicon.png') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('logo.png') }}">
     <!-- Page Title Here -->
     <title>{{ env('APP_NAME') }} | Admin Dashboard</title>
     @yield('links')

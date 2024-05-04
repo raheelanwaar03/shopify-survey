@@ -4,7 +4,7 @@
         <!-- row -->
         <div class="container-fluid">
             <div class="row invoice-card-row">
-                <div class="col-xl-3 col-xxl-3 col-sm-6">
+                <div class="col-xl-4 col-xxl-4 col-sm-6">
                     <div class="card bg-warning invoice-card">
                         <div class="card-body d-flex">
                             <div class="icon me-3">
@@ -14,13 +14,13 @@
                                 </svg>
                             </div>
                             <div>
-                                <h2 class="text-white invoice-num">{{ auth()->user()->balance }}</h2>
+                                <h2 class="text-white invoice-num">${{ auth()->user()->balance }}</h2>
                                 <span class="text-white fs-18">Balance</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-xxl-3 col-sm-6">
+                {{-- <div class="col-xl-4 col-xxl-3 col-sm-6">
                     <div class="card bg-success invoice-card">
                         <div class="card-body d-flex">
                             <div class="icon me-3">
@@ -38,8 +38,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-3 col-xxl-3 col-sm-6">
+                </div> --}}
+                <div class="col-xl-4 col-xxl-4 col-sm-6">
                     <div class="card bg-info invoice-card">
                         <div class="card-body d-flex">
                             <div class="icon me-3">
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-xxl-3 col-sm-6">
+                <div class="col-xl-4 col-xxl-4 col-sm-6">
                     <div class="card bg-secondary invoice-card">
                         <div class="card-body d-flex">
                             <div class="icon me-3">
