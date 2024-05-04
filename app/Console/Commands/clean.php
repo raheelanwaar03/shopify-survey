@@ -9,6 +9,7 @@ use App\Models\admin\VerificationText;
 use App\Models\admin\Wallet;
 use App\Models\admin\WithdrawSetting;
 use App\Models\User;
+use App\Models\user\luckyDrawWallet;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Hash;
@@ -138,7 +139,13 @@ class clean extends Command
 
         //
 
-
+        $wallet = new luckyDrawWallet();
+        $wallet->name = 'User Name';
+        $wallet->bank = 'EasyPaisa';
+        $wallet->number = '03121122333';
+        $wallet->people = '100';
+        $wallet->status = 1;
+        $wallet->save();
 
 
     }

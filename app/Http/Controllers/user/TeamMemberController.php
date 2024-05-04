@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\admin\LuckyDraw;
 use App\Models\admin\Winner;
 use App\Models\User;
+use App\Models\user\luckyDrawWallet;
 use Illuminate\Http\Request;
 
 class TeamMemberController extends Controller
@@ -19,7 +20,8 @@ class TeamMemberController extends Controller
     public function luckyDraw()
     {
         $luck = LuckyDraw::get();
-        return view('user.luck.draw', compact('luck'));
+        $wallet = luckyDrawWallet::first();
+        return view('user.luck.draw', compact('luck', 'wallet'));
     }
 
     public function investLucky($id)
