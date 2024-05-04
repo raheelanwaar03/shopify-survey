@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\admin\AdminPlans;
+use App\Models\admin\ContactUs;
 use App\Models\admin\VerificationText;
 use App\Models\admin\Wallet;
 use App\Models\user\BuyPlan;
@@ -12,7 +13,9 @@ class Landingpage extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $plan = AdminPlans::get();
+        $contact = ContactUs::where('status',1)->first();
+        return view('welcome', compact('plan', 'contact'));
     }
 
     public function plans()
