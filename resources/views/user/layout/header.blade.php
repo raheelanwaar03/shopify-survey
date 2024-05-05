@@ -57,7 +57,7 @@
                                 Dashboard
                             </div>
                         </div>
-                        <h3 class="font-weight-bold text-success"><b>{{ env('APP_NAME') }}</b></h3>
+                        <h3 class="font-weight-bold text-success" style="margin-top: 10px"><b>{{ env('APP_NAME') }}</b></h3>
                         <ul class="navbar-nav header-right">
                             <li class="nav-item dropdown notification_dropdown">
                                 <a class="nav-link bell dz-theme-mode p-0" href="javascript:void(0);">
