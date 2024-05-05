@@ -47,8 +47,6 @@
                         </div>
                     </div>
                     <div class="fxt-transformX-R-50 fxt-transition-delay-10">
-                        <div class="fxt-switcher-description">Don't have an account?<a href="{{ route('register') }}"
-                                class="fxt-switcher-text">Register</a></div>
                     </div>
                 </div>
             </div>
