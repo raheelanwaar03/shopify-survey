@@ -41,7 +41,6 @@
                 <h2 class="brand-title text-white" width="124px" height="33px">Shopify</h2>
             </a>
             <div class="nav-control">
-                <h3 class="text-center">{{ env('APP_NAME') }}</h3>
                 <div class="hamburger">
                     <span class="line text-white"></span><span class="line text-white"></span><span
                         class="line text-white"></span>
@@ -57,6 +56,7 @@
                                 Dashboard
                             </div>
                         </div>
+                        <h3 class="text-center">{{ env('APP_NAME') }}</h3>
                         <ul class="navbar-nav header-right">
                             <li class="nav-item dropdown notification_dropdown">
                                 <a class="nav-link bell dz-theme-mode p-0" href="javascript:void(0);">

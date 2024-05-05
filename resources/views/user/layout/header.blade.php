@@ -42,9 +42,9 @@
             </a>
             <div class="nav-control">
                 <div class="hamburger">
-                    <h3 class="">{{ env('APP_NAME') }}</h3>
-                    <span class="line text-white"></span><span class="line text-white"></span><span
-                        class="line text-white"></span>
+                    <span class="line text-white"></span>
+                    <span class="line text-white"></span>
+                    <span class="line text-white"></span>
                 </div>
             </div>
         </div>
@@ -57,12 +57,12 @@
                                 Dashboard
                             </div>
                         </div>
+                        <h3 class="text-success">{{ env('APP_NAME') }}</h3>
                         <ul class="navbar-nav header-right">
                             <li class="nav-item dropdown notification_dropdown">
                                 <a class="nav-link bell dz-theme-mode p-0" href="javascript:void(0);">
                                     <i id="icon-light" class="fas fa-sun"></i>
                                     <i id="icon-dark" class="fas fa-moon"></i>
-
                                 </a>
                             </li>
                             <li class="nav-item">
