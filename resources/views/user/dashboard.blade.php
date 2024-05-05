@@ -82,7 +82,8 @@
                                     <div class="me-auto">
                                         <h4 class="card-title">Total Withdraw</h4>
                                         <div class="d-flex align-items-center">
-                                            <h2 class="fs-38 mb-0">{{ total_withdraw() }} $ | {{ total_withdraw_pkr() }} Pkr</h2>
+                                            <h2 class="fs-38 mb-0">{{ number_format(total_withdraw_pkr(), 2) }} $ |
+                                                {{ total_withdraw() }} Pkr</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -93,7 +94,8 @@
                                 <div class="card-body">
                                     <h4 class="card-title">Pending Withdraw</h4>
                                     <div class="d-flex align-items-center">
-                                        <h2 class="fs-38">{{ pending_withdraw() }} $ | {{ pending_withdraw_pkr() }} Pkr</h2>
+                                        <h2 class="fs-38"> {{ number_format(pending_withdraw_pkr(), 2) }} $ |
+                                            {{ pending_withdraw() }} Pkr</h2>
                                     </div>
                                 </div>
                             </div>
@@ -103,8 +105,10 @@
                                 <div class="card-body">
                                     <h4 class="card-title mt-2">Approved Withdraw</h4>
                                     <div class="d-flex align-items-center mt-3 mb-2">
-                                        <h2 class="fs-38 mb-0 me-3">{{ approved_withdraw() }}$ |
-                                            {{ approved_withdraw_pkr() }} Pkr</h2>
+                                        <h2 class="fs-38 mb-0 me-3">
+                                            {{ number_format(approved_withdraw_pkr(), 2) }} $ |
+                                            {{ approved_withdraw() }} Pkr
+                                        </h2>
                                     </div>
                                 </div>
                             </div>

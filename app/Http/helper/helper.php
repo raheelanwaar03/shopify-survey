@@ -41,7 +41,7 @@ function total_withdraw_pkr()
     $withdraw = Withdraw::where('user_id', auth()->user()->id)->get();
     $total_withdraw = 0;
     foreach ($withdraw as $item) {
-        $total_withdraw += $item->amount * $setting->dollar_rate;
+        $total_withdraw += $item->amount / $setting->dollar_rate;
     }
 
     return $total_withdraw;
@@ -66,7 +66,7 @@ function pending_withdraw_pkr()
     $withdraw = Withdraw::where('user_id', auth()->user()->id)->where('status', 'pending')->get();
     $total_withdraw = 0;
     foreach ($withdraw as $item) {
-        $total_withdraw += $item->amount * $setting->dollar_rate;
+        $total_withdraw += $item->amount / $setting->dollar_rate;
     }
 
     return $total_withdraw;
@@ -90,7 +90,7 @@ function approved_withdraw_pkr()
     $withdraw = Withdraw::where('user_id', auth()->user()->id)->where('status', 'approved')->get();
     $total_withdraw = 0;
     foreach ($withdraw as $item) {
-        $total_withdraw += $item->amount * $setting->dollar_rate;
+        $total_withdraw += $item->amount / $setting->dollar_rate;
     }
 
     return $total_withdraw;
