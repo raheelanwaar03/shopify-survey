@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\admin\WithdrawSetting;
 use App\Models\User;
 use App\Models\user\Withdraw;
 use Illuminate\Http\Request;
@@ -32,8 +33,12 @@ class WithdrawController extends Controller
         $withdraw = Withdraw::find($id);
         $withdraw->status = 'approved';
         $withdraw->save();
+        // withdrawable
+        $setting = WithdrawSetting::where('status', 1)->first();
+        $withdrawAble = $withdraw->amount / $setting->dollar_rate;
+
         $user = User::where('id', $withdraw->user_id)->first();
-        $user->balance -= $withdraw->amount;
+        $user->balance -= $withdrawAble;
         $user->save();
         return redirect()->back()->with('success', 'Withdraw Approved');
     }
@@ -43,9 +48,6 @@ class WithdrawController extends Controller
         $withdraw = Withdraw::find($id);
         $withdraw->status = 'rejected';
         $withdraw->save();
-        $user = User::where('id', $withdraw->user_id)->first();
-        $user->balance += $withdraw->amount;
-        $user->save();
         return redirect()->back()->with('success', 'Withdraw Rejected');
     }
 }
