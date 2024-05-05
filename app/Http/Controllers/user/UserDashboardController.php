@@ -4,6 +4,7 @@ namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use App\Models\admin\Task;
+use App\Models\admin\WithdrawSetting;
 use App\Models\User;
 use App\Models\user\TodayRewardCheck;
 use Carbon\Carbon;
@@ -13,8 +14,10 @@ class UserDashboardController extends Controller
 {
     public function index()
     {
+        $setting = WithdrawSetting::where('status', 1)->first();
+        $withdrawAble = $setting->dollar_rate * auth()->user()->balance;
         $user = User::where('id', auth()->user()->id)->with('trxIds')->first();
-        return view('user.dashboard',compact('user'));
+        return view('user.dashboard',compact('user','withdrawAble'));
     }
 
     public function tasks()

@@ -6,11 +6,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <h4 class="text-center">Accourding to Dollar Rate : ({{ $setting->dollar_rate }} * {{ auth()->user()->balance }} =
+                        <h4 class="text-center">Accourding to Dollar Rate : ({{ $setting->dollar_rate }} * {{ auth()->user()->balance }} $ =
                             {{ $withdrawAble }})</h4>
                         <div class="card-header">
                             <h3>Can be Withdraw</h3>
-                            <h2>{{ $withdrawAble }}$</h2>
+                            <h2>{{ $withdrawAble }}</h2>
                         </div>
                         <div class="card-body">
                             <form action="{{ route('User.Store.Withdraw') }}" method="POST">

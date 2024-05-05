@@ -14,7 +14,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h2 class="text-white invoice-num">${{ auth()->user()->balance }}</h2>
+                                <h2 class="text-white invoice-num">${{ auth()->user()->balance }} | {{ $withdrawAble }} Pkr
+                                </h2>
                                 <span class="text-white fs-18">Balance</span>
                             </div>
                         </div>
