@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\admin\Task;
 use App\Models\admin\WithdrawSetting;
 use App\Models\User;
 use App\Models\user\Withdraw;
@@ -33,12 +34,39 @@ function total_withdraw()
     return $total_withdraw;
 }
 
+function total_withdraw_pkr()
+{
+    $setting = WithdrawSetting::where('status', 1)->first();
+
+    $withdraw = Withdraw::where('user_id', auth()->user()->id)->get();
+    $total_withdraw = 0;
+    foreach ($withdraw as $item) {
+        $total_withdraw += $item->amount * $setting->dollar_rate;
+    }
+
+    return $total_withdraw;
+
+}
+
 function pending_withdraw()
 {
     $withdraw = Withdraw::where('user_id', auth()->user()->id)->where('status', 'pending')->get();
     $total_withdraw = 0;
     foreach ($withdraw as $item) {
         $total_withdraw += $item->amount;
+    }
+
+    return $total_withdraw;
+}
+
+function pending_withdraw_pkr()
+{
+    $setting = WithdrawSetting::where('status', 1)->first();
+
+    $withdraw = Withdraw::where('user_id', auth()->user()->id)->where('status', 'pending')->get();
+    $total_withdraw = 0;
+    foreach ($withdraw as $item) {
+        $total_withdraw += $item->amount * $setting->dollar_rate;
     }
 
     return $total_withdraw;
@@ -66,4 +94,12 @@ function approved_withdraw_pkr()
     }
 
     return $total_withdraw;
+}
+
+function Today_task()
+{
+    $user = User::where('id', auth()->user()->id)->with('trxIds')->first();
+    $task = Task::where('level', auth()->user()->level)->where('plan', $user->trxIds->plan_name)->get();
+    $total_task = $task->count();
+    return $total_task;
 }
