@@ -103,3 +103,42 @@ function Today_task()
     $total_task = $task->count();
     return $total_task;
 }
+
+// admin side
+
+function all_users()
+{
+    $user = User::get()->count();
+    return $user;
+}
+
+function paid_users()
+{
+    $user = User::where('status','approved')->get()->count();
+    return $user;
+}
+
+function unpaid_users()
+{
+    $user = User::where('status','pending')->get()->count();
+    return $user;
+}
+
+function all_withdraw()
+{
+    $withdraw = Withdraw::get()->sum('amount');
+    return $withdraw;
+}
+
+function all_pending_withdraw()
+{
+    $withdraw = Withdraw::where('status','pending')->get()->sum('amount');
+    return $withdraw;
+}
+
+
+function all_approved_withdraw()
+{
+    $withdraw = Withdraw::where('status','approved')->get()->sum('amount');
+    return $withdraw;
+}

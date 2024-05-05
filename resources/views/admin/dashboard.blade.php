@@ -5,7 +5,7 @@
         <!-- row -->
         <div class="container-fluid">
             <div class="row invoice-card-row">
-                <div class="col-xl-3 col-xxl-3 col-sm-6">
+                <div class="col-xl-4 col-xxl-4 col-sm-6">
                     <div class="card bg-warning invoice-card">
                         <div class="card-body d-flex">
                             <div class="icon me-3">
@@ -15,13 +15,13 @@
                                 </svg>
                             </div>
                             <div>
-                                <h2 class="text-white invoice-num">2478</h2>
-                                <span class="text-white fs-18">Balance</span>
+                                <h2 class="text-white invoice-num">{{ all_users() }}</h2>
+                                <span class="text-white fs-18">Total User</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-xxl-3 col-sm-6">
+                <div class="col-xl-4 col-xxl-4 col-sm-6">
                     <div class="card bg-success invoice-card">
                         <div class="card-body d-flex">
                             <div class="icon me-3">
@@ -34,13 +34,13 @@
 
                             </div>
                             <div>
-                                <h2 class="text-white invoice-num">983</h2>
+                                <h2 class="text-white invoice-num">{{ paid_users() }}</h2>
                                 <span class="text-white fs-18">Paid User</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-xxl-3 col-sm-6">
+                <div class="col-xl-4 col-xxl-4 col-sm-6">
                     <div class="card bg-info invoice-card">
                         <div class="card-body d-flex">
                             <div class="icon me-3">
@@ -53,13 +53,13 @@
 
                             </div>
                             <div>
-                                <h2 class="text-white invoice-num">1256</h2>
+                                <h2 class="text-white invoice-num">{{ unpaid_users() }}</h2>
                                 <span class="text-white fs-18">Unpaid User</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-xxl-3 col-sm-6">
+                {{-- <div class="col-xl-3 col-xxl-3 col-sm-6">
                     <div class="card bg-secondary invoice-card">
                         <div class="card-body d-flex">
                             <div class="icon me-3">
@@ -75,7 +75,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="row">
                 <div class="col-xl-6 col-xxl-12">
@@ -86,7 +86,7 @@
                                     <div class="me-auto">
                                         <h4 class="card-title">Total Withdraw</h4>
                                         <div class="d-flex align-items-center">
-                                            <h2 class="fs-38 mb-0">98k</h2>
+                                            <h2 class="fs-38 mb-0">{{ number_format(all_withdraw(),2) }}</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -97,7 +97,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title">Pending Withdraw</h4>
                                     <div class="d-flex align-items-center">
-                                        <h2 class="fs-38">854</h2>
+                                        <h2 class="fs-38">{{ number_format(all_pending_withdraw(),2) }}</h2>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title mt-2">Approved Withdraw</h4>
                                     <div class="d-flex align-items-center mt-3 mb-2">
-                                        <h2 class="fs-38 mb-0 me-3">456</h2>
+                                        <h2 class="fs-38 mb-0 me-3">{{ number_format(all_approved_withdraw(),2) }}</h2>
                                     </div>
                                 </div>
                             </div>
