@@ -38,7 +38,7 @@ class RegisteredUserController extends Controller
         $referral = $request->referral;
         if($referral == 'default')
         {
-            return redirect()->back()->with('success','Please make account with sponsor link.');
+            return redirect()->back()->with('error','Please make account with sponsor link.');
         }
 
         // giving user new Id
