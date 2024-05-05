@@ -41,6 +41,7 @@
                 <h2 class="brand-title text-white" width="124px" height="33px">Shopifi</h2>
             </a>
             <div class="nav-control">
+                <h3 class="text-center">{{ env('APP_NAME') }}</h3>
                 <div class="hamburger">
                     <span class="line text-white"></span><span class="line text-white"></span><span
                         class="line text-white"></span>
