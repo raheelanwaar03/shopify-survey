@@ -45,10 +45,6 @@
                             <p class="fxt-description">Make a part of upcoming success! Add into the new eara of unlimited earning.</p>
                         </div>
                     </div>
-                    <div class="fxt-transformX-R-50 fxt-transition-delay-10">
-                        <div class="fxt-switcher-description">Don't have an account?<a href="{{ route('login') }}"
-                                class="fxt-switcher-text">Sign In</a></div>
-                    </div>
                 </div>
             </div>
             <div class="fxt-form-content">
