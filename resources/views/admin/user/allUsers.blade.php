@@ -12,7 +12,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Pending Users</h4>
+                            <h4 class="card-title">All Users</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -54,6 +54,8 @@
                                                         <button data-user-id="{{ $item->trxIds->user_id }}"
                                                             class="btn btn-danger rejectButton shadow btn-xs sharp me-1"><i
                                                                 class="fa-solid fa-xmark"></i></button>
+                                                        <a href="{{ route('Admin.Edit.User', $item->id) }}"
+                                                            class="btn btn-sm btn-info">Edit</a>
                                                     </div>
                                                 </td>
                                             </tr>
