@@ -16,7 +16,12 @@ class AdminDashboardController extends Controller
 
     public function allUsers()
     {
-        $users = User::with('trxIds')->get();
+        $users = User::has('trxIds')
+            ->whereHas('trxIds', function ($query) {
+                $query->whereNotNull('trx')->whereNotNull('img')
+                    ->whereNotNull('user_name')->whereNotNull('account');
+            })->get();
+
         return view('admin.user.allUsers', compact('users'));
     }
 
@@ -70,12 +75,11 @@ class AdminDashboardController extends Controller
         return redirect()->back()->with('success', 'User Updated successfully');
     }
 
-    public function updatePassword(Request $request,$id)
+    public function updatePassword(Request $request, $id)
     {
         $user = User::find($id);
         $user->password = Hash::make($request->password);
         $user->save();
-        return redirect()->back()->with('success','User Password Changed');
+        return redirect()->back()->with('success', 'User Password Changed');
     }
-
 }
