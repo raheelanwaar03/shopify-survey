@@ -6,6 +6,7 @@ use App\Models\admin\AdminPlans;
 use App\Models\admin\ContactUs;
 use App\Models\admin\VerificationText;
 use App\Models\admin\Wallet;
+use App\Models\User;
 use App\Models\user\BuyPlan;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class Landingpage extends Controller
     public function index()
     {
         $plan = AdminPlans::get();
-        $contact = ContactUs::where('status',1)->first();
+        $contact = ContactUs::where('status', 1)->first();
         return view('welcome', compact('plan', 'contact'));
     }
 
@@ -27,6 +28,23 @@ class Landingpage extends Controller
 
     public function buyPlan(Request $request)
     {
+
+        $tidChecks = BuyPlan::get();
+        if ($tidChecks != null) {
+            foreach ($tidChecks as $item) {
+                $item = $item->trx;
+                if ($request->trx_id == $item)
+                    return redirect()->back()->with('error', 'This tid is used before');
+            }
+        }
+
+
+        $user = User::find(auth()->user()->id);
+        if ($user->status == 'rejected') {
+            $user->status = 'pending';
+            $user->save();
+        }
+
         $image = $request->img;
         $imageName = rand(111111, 999999) . '.' . $image->getClientOriginalExtension();
         $image->move(public_path('images'), $imageName);

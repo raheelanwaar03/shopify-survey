@@ -30,7 +30,7 @@
 
 <body>
 
-    <x-alert/>
+    <x-alert />
     <section data-bs-version="5.1" class="menu menu1 cid-tBnM1aClNb" once="menu" id="menu01-0">
 
         <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
@@ -38,7 +38,9 @@
                 <div class="navbar-brand">
 
                     <span class="navbar-caption-wrap"><a class="navbar-caption text-primary display-7"
-                            href="{{ route('Welcome') }}"><h3>{{ env('APP_NAME') }}</h3></a></span>
+                            href="{{ route('Welcome') }}">
+                            <h3>{{ env('APP_NAME') }}</h3>
+                        </a></span>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
                     data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"
@@ -68,9 +70,6 @@
                                     class="nav-link link text-primary display-4">Dashboard</a>
                             </li>
                         @else
-                            <li class="nav-item"><a href="{{ route('register') }}"
-                                    class="nav-link link text-primary display-4">Register</a>
-                            </li>
                             <li class="nav-item"><a href="{{ route('login') }}"
                                     class="nav-link link text-primary display-4">Login</a>
                             </li>
@@ -87,12 +86,13 @@
             <div class="row align-left">
                 <div class="col-12 m-auto col-lg-7 pb-5">
 
-                    <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Welcome to {{ env('APP_NAME') }}</strong></h1>
+                    <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2"><strong>Welcome to
+                            {{ env('APP_NAME') }}</strong></h1>
 
                     <p class="mbr-text mbr-fonts-style display-7">
                         Best earning platform to earn daily profit and win expensive itesm in very cheep.</p>
-                    <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="{{ route('login') }}">Login</a>
-                        <a class="btn btn-white display-4" href="{{ route('register') }}">Register</a>
+                    <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4"
+                            href="{{ route('login') }}">Login</a>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -103,12 +103,6 @@
     </section>
 
     <section data-bs-version="5.1" class="features7 cid-tBnXUPCVJr" id="features07-3">
-
-
-
-
-
-
         <div class="container" id="features">
             <div class="row align-left justify-content-center">
                 <div class="col-12">
@@ -462,7 +456,7 @@
                                     <br>
                                     Profit : {{ $item->profit }}
                                 </h4>
-                                <div class="mbr-section-btn mb-4"><a href="{{ route('register') }}"
+                                <div class="mbr-section-btn mb-4"><a href="{{ route('login') }}"
                                         class="btn btn-primary display-4">Invest</a></div>
                                 <hr>
                             </div>

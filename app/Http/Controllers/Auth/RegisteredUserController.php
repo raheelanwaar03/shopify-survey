@@ -35,6 +35,12 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        $referral = $request->referral;
+        if($referral == 'default')
+        {
+            return redirect()->back()->with('success','Please make account with sponsor link.');
+        }
+
         // giving user new Id
         $user_id = "SH" . rand(11111, 99999);
 
