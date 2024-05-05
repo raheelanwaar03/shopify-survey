@@ -56,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-xxl-4 col-sm-6">
+                {{-- <div class="col-xl-4 col-xxl-4 col-sm-6">
                     <div class="card bg-secondary invoice-card">
                         <div class="card-body d-flex">
                             <div class="icon me-3">
@@ -71,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="row">
                 <div class="col-xl-6 col-xxl-12">
