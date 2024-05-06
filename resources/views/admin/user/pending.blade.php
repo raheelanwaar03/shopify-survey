@@ -55,7 +55,7 @@
                                                             class="btn btn-danger rejectButton shadow btn-xs sharp me-1"><i
                                                                 class="fa-solid fa-xmark"></i></button>
                                                         <a href="{{ route('Admin.Edit.User', $item->id) }}"
-                                                            class="btn btn-sm btn-info">Edit</a>
+                                                            class="btn btn-sm btn-info"><i class="fas fa-pencil-alt"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>
