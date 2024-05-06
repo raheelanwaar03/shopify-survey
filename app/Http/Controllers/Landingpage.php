@@ -41,13 +41,13 @@ class Landingpage extends Controller
         $trxID = $request->trx;
         $trxLength = strlen($trxID);
         if ($trxLength <= 10) {
-            return redirect()->back()->with('error', 'Please enter 11 charcter num');
+            return redirect()->back()->with('error', 'Please enter 11 charcters of trx');
         }
 
         $num = $request->account;
         $numLength = strlen($num);
         if ($numLength <= 10) {
-            return redirect()->back()->with('error', 'Please enter 11 nummber');
+            return redirect()->back()->with('error', 'Please enter 11 digits nummber');
         }
 
         $user = User::find(auth()->user()->id);

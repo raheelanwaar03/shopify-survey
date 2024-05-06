@@ -35,7 +35,7 @@
                                                 <td>{{ $item->title }}</td>
                                                 <td>{{ $item->plan }}</td>
                                                 <td>{{ $item->level }}</td>
-                                                <td>{{ $item->earning }}</td>
+                                                <td>{{ number_format($item->earning,5) }}</td>
                                                 <td>{{ $item->link }}</td>
                                                 <td>
                                                     <img src="{{ asset('tasks/' . $item->photo) }}" height="50px"
