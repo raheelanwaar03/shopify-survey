@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::name('User.')->prefix('User')->middleware('auth', 'user', 'fees')->group(function () {
     Route::get('/Dashboard', [UserDashboardController::class, 'index'])->name('Dashboard');
+    Route::get('/Profile', [UserDashboardController::class, 'profile'])->name('Profile.Details');
     // Withdraw Requsts
     Route::get('Apply/Withdraw', [WithdrawController::class, 'apply'])->name('Apply.Withdraw');
     Route::post('Store/Withdraw', [WithdrawController::class, 'storeWithdraw'])->name('Store.Withdraw');

@@ -79,4 +79,13 @@ class UserDashboardController extends Controller
             }
         }
     }
+
+    public function profile()
+    {
+        $user = User::where('id',auth()->user()->id)->with('trxIds')->first();
+        return view('user.profile',compact('user'));
+    }
+
+
+
 }

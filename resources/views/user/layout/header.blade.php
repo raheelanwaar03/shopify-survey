@@ -120,6 +120,11 @@
                             <li><a href="{{ route('User.Lucky.Winner') }}" class="text-white">Winner</a></li>
                         </ul>
                     </li>
+                    <li><a href="{{ route('User.Profile.Details') }}">
+                            <i class="flaticon-086-star text-white"></i>
+                            <span class="nav-text text-white">Profile</span>
+                        </a>
+                    </li>
                     <li>
                         <a>
                             <form action="{{ route('logout') }}" method="POST">
