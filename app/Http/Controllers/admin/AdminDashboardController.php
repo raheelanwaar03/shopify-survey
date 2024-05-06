@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\user\BuyPlan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -60,8 +61,16 @@ class AdminDashboardController extends Controller
 
     public function editUser($id)
     {
-        $user = User::find($id);
+        $user = User::with('trxIds')->find($id);
         return view('admin.user.edit', compact('user'));
+    }
+
+    public function updateUserPlan(Request $request,$id)
+    {
+        $plan = BuyPlan::where('user_id',$request->user_id)->where('id',$id)->first();
+        $plan->plan_name = $request->plan;
+        $plan->save();
+        return redirect()->back()->with('success','Plan changed');
     }
 
     public function updateUser(Request $request, $id)

@@ -40,7 +40,31 @@
                         </div>
                     </div>
                 </div>
-
+                {{-- Plan --}}
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-top">
+                            <h3 style="text-align: center;">Change User Plan</h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="{{ route('Admin.Update.User.Plan', $user->trxIds->id) }}" method="POST">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="plan" class="form-label">User Plan</label>
+                                    <input type="text" name="plan" id="plan" class="form-control"
+                                        value="{{ $user->trxIds->plan_name }}">
+                                </div>
+                                <div class="">
+                                    <input type="text" name="user_id" value="{{ $user->id }}" hidden>
+                                </div>
+                                <div class="m-3">
+                                    <button class="btn btn-success" type="submit">Change</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {{-- Password --}}
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-top">
