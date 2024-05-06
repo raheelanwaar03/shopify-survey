@@ -57,27 +57,27 @@
                             <div class="form-group">
                                 <label for="name" class="fxt-label">Full Name</label>
                                 <input type="text" id="name" class="form-control" name="name"
-                                    placeholder="Enter your name" required="required">
+                                    placeholder="Enter your name" required>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="fxt-label">Email Address</label>
                                 <input type="email" id="email" class="form-control" name="email"
-                                    placeholder="Enter your email" required="required">
+                                    placeholder="Enter your email" required>
                             </div>
                             <div class="form-group">
                                 <label for="country" class="fxt-label">Country</label>
                                 <input type="country" id="country" class="form-control" name="country"
-                                    placeholder="Your Country Name" required="required">
+                                    placeholder="Your Country Name" required>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="fxt-label">Password</label>
                                 <input id="password" type="password" class="form-control" name="password"
-                                    placeholder="Enter Password" required="required">
+                                    placeholder="Enter Password" required>
                             </div>
                             <div class="form-group">
                                 <label for="confirm_password" class="fxt-label">Confirm Password</label>
                                 <input id="confirm_password" type="password" class="form-control"
-                                    name="password_confirmation" placeholder="Confirm Password" required="required">
+                                    name="password_confirmation" placeholder="Confirm Password" required>
                             </div>
                             <div class="form-group">
                                 <label class="fxt-label">Sponsor</label>

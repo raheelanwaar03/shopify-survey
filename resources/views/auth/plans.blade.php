@@ -63,7 +63,7 @@
                             @csrf
                             <div class="form-group">
                                 <label for="plan_name" class="fxt-label">Select Plan</label>
-                                <select name="plan_name" id="plan_name" class="form-control">
+                                <select name="plan_name" id="plan_name" required class="form-control">
                                     @foreach ($plans as $item)
                                         <option value="{{ $item->plan_name }}">{{ $item->plan_name }}</option>
                                     @endforeach
@@ -71,22 +71,22 @@
                             </div>
                             <div class="form-group">
                                 <label for="ID" class="fxt-label">Transcation ID:</label>
-                                <input type="text" id="ID" class="form-control" name="trx"
-                                    placeholder="Transcation ID of Payment Transfer" required="required">
+                                <input type="text" id="ID" class="form-control" required name="trx"
+                                    placeholder="Transcation ID of Payment Transfer">
                             </div>
                             <div class="form-group">
                                 <label for="account" class="fxt-label">Account No:</label>
-                                <input id="account" type="number" class="form-control" name="account"
-                                    placeholder="Your Account Number" required="required">
+                                <input id="account" type="number" class="form-control" required name="account"
+                                    placeholder="Your Account Number">
                             </div>
                             <div class="form-group">
                                 <label for="name" class="fxt-label">Your Name</label>
                                 <input id="name" type="text" class="form-control" name="user_name"
-                                    placeholder="Your Name on Your Wallet" required="required">
+                                    placeholder="Your Name on Your Wallet" required>
                             </div>
                             <div class="form-group">
                                 <label class="fxt-label">Payment Screen Shot</label>
-                                <input type="file" class="form-control" name="img">
+                                <input type="file" class="form-control" name="img" required>
                             </div>
                             <div class="form-group mb-3">
                                 <button type="submit" class="fxt-btn-fill">Submit</button>

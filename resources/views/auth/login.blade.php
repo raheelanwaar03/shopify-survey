@@ -60,12 +60,12 @@
                             <div class="form-group">
                                 <label for="email" class="fxt-label">Email Address</label>
                                 <input type="email" id="email" class="form-control" name="email"
-                                    placeholder="Enter your email" required="required">
+                                    placeholder="Enter your email" required>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="fxt-label">Password</label>
                                 <input id="password" type="password" class="form-control" name="password"
-                                    placeholder="Enter Password" required="required">
+                                    placeholder="Enter Password" required>
                             </div>
                             <div class="form-group">
                                 <a href="{{ route('password.request') }}" class="fxt-switcher-text">Forgot Password</a>
