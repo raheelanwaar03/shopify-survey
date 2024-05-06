@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('des');
-            $table->integer('earning', 7, 2);
+            $table->float('earning', 7, 2);
             $table->string('level');
             $table->string('plan');
             $table->string('link');
