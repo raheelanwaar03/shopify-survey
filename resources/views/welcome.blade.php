@@ -91,8 +91,15 @@
 
                     <p class="mbr-text mbr-fonts-style display-7">
                         Best earning platform to earn daily profit and win expensive itesm in very cheep.</p>
-                    <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4"
-                            href="{{ route('login') }}">Login</a>
+                    <div class="mbr-section-btn mt-3">
+                        @if (auth()->user())
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button class="btn btn-secondary display-4">Logout</button>
+                            </form>
+                        @else
+                            <a class="btn btn-secondary display-4" href="{{ route('login') }}">Login</a>
+                        @endif
                     </div>
                 </div>
                 <div class="col-lg-5">
