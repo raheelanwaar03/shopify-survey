@@ -77,12 +77,12 @@
                 <div class="col-xl-6 col-xxl-12">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="card progress-card">
+                            <div class="card bg-success progress-card">
                                 <div class="card-body d-flex">
                                     <div class="me-auto">
-                                        <h4 class="card-title">Total Withdraw</h4>
+                                        <h4 class="card-title text-white">Total Withdraw</h4>
                                         <div class="d-flex align-items-center">
-                                            <h2 class="fs-38 mb-0">{{ number_format(total_withdraw_pkr(), 2) }} $ |
+                                            <h2 class="fs-38 mb-0 text-white">{{ number_format(total_withdraw_pkr(), 2) }} $ |
                                                 {{ total_withdraw() }} Pkr</h2>
                                         </div>
                                     </div>
@@ -90,22 +90,22 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="card">
+                            <div class="card bg-primary">
                                 <div class="card-body">
-                                    <h4 class="card-title">Pending Withdraw</h4>
+                                    <h4 class="card-title text-white">Pending Withdraw</h4>
                                     <div class="d-flex align-items-center">
-                                        <h2 class="fs-38"> {{ number_format(pending_withdraw_pkr(), 2) }} $ |
+                                        <h2 class="fs-38 text-white">{{ number_format(pending_withdraw_pkr(), 2) }} $ |
                                             {{ pending_withdraw() }} Pkr</h2>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="card">
+                            <div class="card bg-dark">
                                 <div class="card-body">
-                                    <h4 class="card-title mt-2">Approved Withdraw</h4>
+                                    <h4 class="card-title text-white mt-2">Approved Withdraw</h4>
                                     <div class="d-flex align-items-center mt-3 mb-2">
-                                        <h2 class="fs-38 mb-0 me-3">
+                                        <h2 class="fs-38 mb-0 me-3 text-white">
                                             {{ number_format(approved_withdraw_pkr(), 2) }} $ |
                                             {{ approved_withdraw() }} Pkr
                                         </h2>

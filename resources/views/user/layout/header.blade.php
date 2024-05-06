@@ -121,7 +121,7 @@
                         </ul>
                     </li>
                     <li><a href="{{ route('User.Profile.Details') }}">
-                            <i class="flaticon-086-star text-white"></i>
+                        <i class="fa-solid fa-user text-white"></i>
                             <span class="nav-text text-white">Profile</span>
                         </a>
                     </li>
