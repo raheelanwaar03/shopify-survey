@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Models\admin\AdminPlans;
 use App\Models\admin\ContactUs;
+use App\Models\admin\MarqueeText;
 use App\Models\admin\referralLevel;
 use App\Models\admin\VerificationText;
 use App\Models\admin\Wallet;
@@ -92,11 +93,11 @@ class clean extends Command
         $verificationText->save();
 
         // add marquee
-        // $text = new MarqueeText();
-        // $text->text = ' OmegaEarn is a very good platform to invest your time and money. Contact Us on this number
-        // (0346-7805896) if any query. It is a real earning platform. Refere this to your friends and family.';
-        // $text->status = 1;
-        // $text->save();
+        $text = new MarqueeText();
+        $text->text = 'ShopifiEarns is a very good platform to invest your time and money. Contact Us on this number
+        (0346-7805896) if any query. It is a real earning platform. Refere this to your friends and family.';
+        $text->status = 1;
+        $text->save();
 
         // Contact us
         $contact = new ContactUs();

@@ -4,6 +4,10 @@
         <!-- row -->
         <div class="container-fluid">
             <div class="row invoice-card-row">
+                <div class="col-md-12">
+                    <marquee behavior="" direction="" style="background-color: #01C854;padding:10px;color:white">
+                        {{ $text->text }}</marquee>
+                </div>
                 <div class="col-xl-6 col-xxl-6 col-sm-6">
                     <div class="card bg-warning invoice-card">
                         <div class="card-body d-flex">
@@ -82,7 +86,8 @@
                                     <div class="me-auto">
                                         <h4 class="card-title text-white">Total Withdraw</h4>
                                         <div class="d-flex align-items-center">
-                                            <h2 class="fs-38 mb-0 text-white">{{ number_format(total_withdraw_pkr(), 2) }} $ |
+                                            <h2 class="fs-38 mb-0 text-white">{{ number_format(total_withdraw_pkr(), 2) }} $
+                                                |
                                                 {{ total_withdraw() }} Pkr</h2>
                                         </div>
                                     </div>
