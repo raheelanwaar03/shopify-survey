@@ -33,8 +33,8 @@
                                         placeholder="Enter Your Account Number to Withdraw" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="name" class="form-label">Name on Account</label>
-                                    <input type="text" name="name" id="name" placeholder="Your bank Name"
+                                    <label for="name" class="form-label">Account Holder Name</label>
+                                    <input type="text" name="name" id="name" placeholder="Account holder name"
                                         class="form-control">
                                 </div>
                                 <div class="mt-3">

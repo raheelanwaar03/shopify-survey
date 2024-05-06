@@ -31,7 +31,7 @@ class WithdrawController extends Controller
             return redirect()->route('User.Dashboard')->with('error', 'Empty Balance');
         }
 
-        $setting = Wallet::wher('status',1)->first();
+        $setting = Wallet::where('status',1)->first();
         $withdrawAble = $setting->dollar_rate * auth()->user()->balance;
 
         if ($request->amount > $withdrawAble) {
