@@ -65,6 +65,11 @@
                                     placeholder="Enter your email" required="required">
                             </div>
                             <div class="form-group">
+                                <label for="country" class="fxt-label">Country</label>
+                                <input type="country" id="country" class="form-control" name="country"
+                                    placeholder="Your Country Name" required="required">
+                            </div>
+                            <div class="form-group">
                                 <label for="password" class="fxt-label">Password</label>
                                 <input id="password" type="password" class="form-control" name="password"
                                     placeholder="Enter Password" required="required">

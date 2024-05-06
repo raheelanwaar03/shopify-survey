@@ -38,7 +38,7 @@
         <div class="nav-header" style="background-color: #4cb32b;">
             <a href="{{ route('User.Dashboard') }}" class="brand-logo">
                 <img src="{{ asset('logo.png') }}" height="50px" width="50px" alt="">
-                <h2 class="brand-title text-white" width="124px" height="33px">Shopifi</h2>
+                <h2 class="brand-title text-white" width="124px" height="33px">Shopif</h2>
             </a>
             <div class="nav-control">
                 <div class="hamburger">
@@ -57,7 +57,10 @@
                                 Dashboard
                             </div>
                         </div>
-                        <h3 class="font-weight-bold text-success" style="margin-top: 10px"><b>Shopify</b></h3>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="{{ asset('logo.png') }}" height="50px" width="50px" alt="">
+                            <h1 class="mt-2">Shopify</h1>
+                        </div>
                         <ul class="navbar-nav header-right">
                             <li class="nav-item dropdown notification_dropdown">
                                 <a class="nav-link bell dz-theme-mode p-0" href="javascript:void(0);">

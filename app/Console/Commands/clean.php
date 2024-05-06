@@ -46,6 +46,7 @@ class clean extends Command
         $user->referral = 'default';
         $user->balance = '0';
         $user->email = 'admin@gmail.com';
+        $user->country = 'Pakistan';
         $user->password = Hash::make('asdfasdf');
         $user->status = 'approved';
         $user->role = 'admin';
@@ -58,6 +59,7 @@ class clean extends Command
         $user->referral = 'default';
         $user->balance = '1000';
         $user->email = 'user@gmail.com';
+        $user->country = 'Pakistan';
         $user->password = Hash::make('asdfasdf');
         $user->status = 'approved';
         $user->role = 'user';
@@ -146,7 +148,5 @@ class clean extends Command
         $wallet->people = '100';
         $wallet->status = 1;
         $wallet->save();
-
-
     }
 }
