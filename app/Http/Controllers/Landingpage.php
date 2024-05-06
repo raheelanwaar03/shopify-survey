@@ -38,6 +38,17 @@ class Landingpage extends Controller
             }
         }
 
+        $trxID = $request->trx;
+        $trxLength = strlen($trxID);
+        if ($trxLength <= 10) {
+            return redirect()->back()->with('error', 'Please enter 11 charcter num');
+        }
+
+        $num = $request->account;
+        $numLength = strlen($num);
+        if ($numLength <= 10) {
+            return redirect()->back()->with('error', 'Please enter 11 nummber');
+        }
 
         $user = User::find(auth()->user()->id);
         if ($user->status == 'rejected') {
