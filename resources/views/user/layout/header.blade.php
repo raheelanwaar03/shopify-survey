@@ -38,7 +38,7 @@
         <div class="nav-header" style="background-color: #4cb32b;">
             <a href="{{ route('User.Dashboard') }}" class="brand-logo">
                 <img src="{{ asset('logo.png') }}" height="50px" width="50px" alt="">
-                <h2 class="brand-title text-white" width="124px" height="33px">Shopif</h2>
+                <h2 class="brand-title text-white" width="124px" height="33px">Shopify</h2>
             </a>
             <div class="nav-control">
                 <div class="hamburger">

@@ -56,13 +56,15 @@
                                 Dashboard
                             </div>
                         </div>
-                        <h3 class="font-weight-bold text-success" style="margin-top: 10px"><b>Shopify</b></h3>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="{{ asset('logo.png') }}" height="50px" width="50px" alt="">
+                            <h1 class="mt-2">Shopify</h1>
+                        </div>
                         <ul class="navbar-nav header-right">
                             <li class="nav-item dropdown notification_dropdown">
                                 <a class="nav-link bell dz-theme-mode p-0" href="javascript:void(0);">
                                     <i id="icon-light" class="fas fa-sun"></i>
                                     <i id="icon-dark" class="fas fa-moon"></i>
-
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -102,7 +104,8 @@
                         <ul aria-expanded="false">
                             <li><a href="{{ route('Admin.All.Users') }}" class="text-white">All Users</a></li>
                             <li><a href="{{ route('Admin.Pending.Users') }}" class="text-white">Pending Users</a></li>
-                            <li><a href="{{ route('Admin.Approved.Users') }}" class="text-white">Approved Users</a></li>
+                            <li><a href="{{ route('Admin.Approved.Users') }}" class="text-white">Approved Users</a>
+                            </li>
                             <li><a href="{{ route('Admin.Rejected.Users') }}" class="text-white">Rejected Users</a>
                             </li>
                         </ul>
@@ -150,9 +153,12 @@
                             <span class="nav-text text-white">Withdraw</span>
                         </a>
                         <ul aria-expanded="false" class="mm-collapse" style="">
-                            <li><a href="{{ route('Admin.Pending.Withdraw') }}" class="text-white">Pending Withdraw</a>
-                                <li><a href="{{ route('Admin.Approved.Withdraw') }}" class="text-white">Approved Withdraw</a>
-                                    <li><a href="{{ route('Admin.Rejected.Withdraw') }}" class="text-white">Rejected Withdraw</a>
+                            <li><a href="{{ route('Admin.Pending.Withdraw') }}" class="text-white">Pending
+                                    Withdraw</a>
+                            <li><a href="{{ route('Admin.Approved.Withdraw') }}" class="text-white">Approved
+                                    Withdraw</a>
+                            <li><a href="{{ route('Admin.Rejected.Withdraw') }}" class="text-white">Rejected
+                                    Withdraw</a>
                             </li>
                         </ul>
                     </li>
