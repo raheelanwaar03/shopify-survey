@@ -26,6 +26,10 @@
                                         <h4 class="text-muted mb-0">{{ auth()->user()->trxIds->plan_name ?? 'Null' }}</h4>
                                         <p>Plan</p>
                                     </div>
+                                    <div class="profile-email px-2 pt-2">
+                                        <h4 class="text-muted mb-0">{{ auth()->user()->level }}</h4>
+                                        <p>Level</p>
+                                    </div>
                                     <div class="d-flex justify-content-center align-items-center">
                                         <form action="{{ route('logout') }}" method="POST">
                                             @csrf
