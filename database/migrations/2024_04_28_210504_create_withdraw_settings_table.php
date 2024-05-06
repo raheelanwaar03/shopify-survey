@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('planA');
             $table->string('planB');
             $table->string('dollar_rate');
+            $table->string('first_commission');
+            $table->string('second_commission');
+            $table->string('third_commission');
             $table->string('status')->default('0');
             $table->timestamps();
         });

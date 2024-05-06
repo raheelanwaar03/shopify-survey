@@ -82,6 +82,9 @@ class clean extends Command
         $setting->planA = '10';
         $setting->planB = '20';
         $setting->dollar_rate = '280';
+        $setting->first_commission = '15';
+        $setting->second_commission = '10';
+        $setting->third_commission = '5';
         $setting->status = 1;
         $setting->save();
 

@@ -38,6 +38,21 @@
                                     <input type="number" name="planB" id="planB" class="form-control"
                                         value="{{ $withdraw->planB }}">
                                 </div>
+                                <div class="form-group">
+                                    <label for="first" class="form-label">First Commission</label>
+                                    <input type="number" name="first_commission" id="first" class="form-control"
+                                        value="{{ $withdraw->first_commission }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="second" class="form-label">Second Commission</label>
+                                    <input type="number" name="second_commission" id="second" class="form-control"
+                                        value="{{ $withdraw->second_commission }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="third" class="form-label">Third Commission</label>
+                                    <input type="number" name="third_commission" id="third" class="form-control"
+                                        value="{{ $withdraw->third_commission }}">
+                                </div>
                                 <div class="m-3">
                                     <button class="btn btn-success" type="submit">Update</button>
                                 </div>

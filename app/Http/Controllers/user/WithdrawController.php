@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use App\Models\admin\Wallet;
 use App\Models\admin\WithdrawSetting;
 use App\Models\user\Withdraw;
 use Illuminate\Http\Request;
@@ -30,7 +31,10 @@ class WithdrawController extends Controller
             return redirect()->route('User.Dashboard')->with('error', 'Empty Balance');
         }
 
-        if ($request->amount > auth()->user()->balance) {
+        $setting = Wallet::wher('status',1)->first();
+        $withdrawAble = $setting->dollar_rate * auth()->user()->balance;
+
+        if ($request->amount > $withdrawAble) {
             return redirect()->back()->with('error', 'Less Balance');
         }
 

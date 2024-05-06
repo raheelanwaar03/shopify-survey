@@ -56,6 +56,9 @@ class SettingController extends Controller
         $withdraw->dollar_rate = $request->dollar_rate;
         $withdraw->planA = $request->planA;
         $withdraw->planB = $request->planB;
+        $withdraw->first_commission = $request->first_commission;
+        $withdraw->second_commission = $request->second_commission;
+        $withdraw->third_commission = $request->third_commission;
         $withdraw->save();
         return redirect()->back()->with('success', 'Setting Updated');
     }
