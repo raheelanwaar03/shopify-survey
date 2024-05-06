@@ -53,6 +53,7 @@ class SettingController extends Controller
         $withdraw = WithdrawSetting::find($id);
         $withdraw->min_amount = $request->min_amount;
         $withdraw->max_amount = $request->max_amount;
+        $withdraw->dollar_rate = $request->dollar_rate;
         $withdraw->planA = $request->planA;
         $withdraw->planB = $request->planB;
         $withdraw->save();

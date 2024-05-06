@@ -8,7 +8,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-top">
-                            <h3 style="text-align: center;">Withdraw Setting</h3>
+                            <h3 style="text-align: center;">General Settings</h3>
                         </div>
                         <div class="card-body">
                             <form action="{{ route('Admin.Update.Setting', $withdraw->id) }}" method="POST">
@@ -22,6 +22,11 @@
                                     <label for="max_amount" class="form-label">Maximum Withdraw Amount</label>
                                     <input type="number" name="max_amount" id="max_amount" class="form-control"
                                         value="{{ $withdraw->max_amount }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dollar" class="form-label">Dollar Rate</label>
+                                    <input type="number" name="dollar_rate" id="dollar" class="form-control"
+                                        value="{{ $withdraw->dollar_rate }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="planA" class="form-label">Plan A</label>
