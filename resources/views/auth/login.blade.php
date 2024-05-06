@@ -68,7 +68,7 @@
                                     placeholder="Enter Password" required="required">
                             </div>
                             <div class="form-group">
-                                <a href="#" class="fxt-switcher-text">Forgot Password</a>
+                                <a href="{{ route('password.request') }}" class="fxt-switcher-text">Forgot Password</a>
                             </div>
                             <div class="form-group mb-3">
                                 <button type="submit" class="fxt-btn-fill">Log in</button>
