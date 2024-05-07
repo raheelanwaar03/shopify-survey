@@ -39,7 +39,7 @@
 
                     <span class="navbar-caption-wrap"><a class="navbar-caption text-primary display-7"
                             href="{{ route('Welcome') }}">
-                            <h3>{{ env('APP_NAME') }}</h3>
+                            <h3 class="fs-3">{{ env('APP_NAME') }}</h3>
                         </a></span>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
@@ -54,20 +54,20 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-                        <li class="nav-item"><a class="nav-link link text-primary display-4"
+                        <li class="nav-item"><a class="nav-link link text-primary fs-3 display-4"
                                 href="{{ route('Welcome') }}">Home</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link link text-primary display-4" href="#plans">Plans</a>
+                        <li class="nav-item"><a class="nav-link link text-primary fs-3 display-4" href="#plans">Plans</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link link text-primary display-4"
+                        <li class="nav-item"><a class="nav-link link text-primary fs-3 display-4"
                                 href="#features">Features</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link link text-primary display-4"
+                        <li class="nav-item"><a class="nav-link link text-primary fs-3 display-4"
                                 href="#contact">Contacts</a>
                         </li>
                         @if (auth()->user())
                             <li class="nav-item"><a href="{{ route('User.Dashboard') }}"
-                                    class="nav-link link text-primary display-4">Dashboard</a>
+                                    class="nav-link link text-primary fs-3 display-4">Dashboard</a>
                             </li>
                         @else
                             <li class="nav-item"><a href="{{ route('login') }}"
