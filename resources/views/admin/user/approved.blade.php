@@ -21,6 +21,7 @@
                                         <tr>
                                             <th>User ID</th>
                                             <th>Name</th>
+                                            <th>Email</th>
                                             <th>Balance</th>
                                             <th>Plan</th>
                                             <th>Referral</th>
@@ -36,6 +37,7 @@
                                             <tr id="tr_{{ $item->trxIds->user_id }}">
                                                 <td class="text-dark">{{ $item->user_id }}</td>
                                                 <td class="text-dark">{{ $item->name }}</td>
+                                                <td class="text-dark">{{ $item->email }}</td>
                                                 <td class="text-dark">{{ $item->balance }}</td>
                                                 <td class="text-dark">{{ $item->trxIds->plan_name }}</td>
                                                 <td class="text-dark">{{ $item->referral }}</td>
