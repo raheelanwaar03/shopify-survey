@@ -6,6 +6,7 @@ use App\Models\admin\AdminPlans;
 use App\Models\admin\ContactUs;
 use App\Models\admin\VerificationText;
 use App\Models\admin\Wallet;
+use App\Models\admin\WithdrawSetting;
 use App\Models\User;
 use App\Models\user\BuyPlan;
 use Illuminate\Http\Request;
@@ -21,9 +22,11 @@ class Landingpage extends Controller
 
     public function plans()
     {
+        $setting = WithdrawSetting::where('status', 1)->first();
+        $rate = $setting->dollar_rate;
         $plans = AdminPlans::get();
         $wallet = Wallet::where('status', 1)->first();
-        return view('auth.plans', compact('plans', 'wallet'));
+        return view('auth.plans', compact('plans', 'wallet', 'rate'));
     }
 
     public function buyPlan(Request $request)

@@ -35,8 +35,12 @@
                             <div class="card bg-transparent mb-2" style="border: 1px solid #1ebe92">
                                 <div class="card-body text-center">
                                     <h3 style="color:#1ebe92">{{ $item->plan_name }}</h3>
-                                    <h6 style="color:#1ebe92">Investment : {{ $item->invest }}$</h6>
-                                    <h6 style="color:#1ebe92">Profit : {{ $item->profit }}$</h6>
+                                    @php
+                                        $pkr_value = $item->invest * $rate;
+                                    @endphp
+                                    <h6 style="color:#1ebe92">Investment : {{ $item->invest }}$ | {{ $pkr_value }} pkr
+                                    </h6>
+                                    <h6 style="color:#1ebe92">Profit : {{ $item->profit }}</h6>
                                     <h6 style="color:#1ebe92">Expire : {{ $item->expire }}</h6>
                                 </div>
                             </div>

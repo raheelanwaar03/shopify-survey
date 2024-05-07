@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('des');
+            $table->text('title');
+            $table->text('des');
             $table->float('earning', 7, 2);
             $table->string('level');
             $table->string('plan');
-            $table->string('link');
+            $table->text('link');
             $table->string('photo');
             $table->timestamps();
         });
