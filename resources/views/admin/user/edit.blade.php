@@ -51,8 +51,11 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="plan" class="form-label">User Plan</label>
-                                    <input type="text" name="plan" id="plan" class="form-control"
-                                        value="{{ $user->trxIds->plan_name }}">
+                                    <select name="plan" class="form-control" value="{{ $user->trxIds->plan_name }}"
+                                        id="plan">
+                                        <option value="Silver">Silver</option>
+                                        <option value="Gold">Gold</option>
+                                    </select>
                                 </div>
                                 <div class="">
                                     <input type="text" name="user_id" value="{{ $user->id }}" hidden>

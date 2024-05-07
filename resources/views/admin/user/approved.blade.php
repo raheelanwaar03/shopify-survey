@@ -34,14 +34,14 @@
                                     <tbody>
                                         @forelse ($users as $item)
                                             <tr id="tr_{{ $item->trxIds->user_id }}">
-                                                <td>{{ $item->user_id }}</td>
-                                                <td>{{ $item->name }}</td>
-                                                <td>{{ $item->balance }}</td>
-                                                <td>{{ $item->trxIds->plan_name }}</td>
-                                                <td>{{ $item->referral }}</td>
-                                                <td>{{ $item->trxIds->trx }}</td>
-                                                <td>{{ $item->trxIds->account }}</td>
-                                                <td>{{ $item->status }}</td>
+                                                <td class="text-dark">{{ $item->user_id }}</td>
+                                                <td class="text-dark">{{ $item->name }}</td>
+                                                <td class="text-dark">{{ $item->balance }}</td>
+                                                <td class="text-dark">{{ $item->trxIds->plan_name }}</td>
+                                                <td class="text-dark">{{ $item->referral }}</td>
+                                                <td class="text-dark">{{ $item->trxIds->trx }}</td>
+                                                <td class="text-dark">{{ $item->trxIds->account }}</td>
+                                                <td class="text-dark">{{ $item->status }}</td>
                                                 <td>
                                                     <img src="{{ asset('images/' . $item->trxIds->img) }}"
                                                         class="img-fluid" height="50px" width="50px">

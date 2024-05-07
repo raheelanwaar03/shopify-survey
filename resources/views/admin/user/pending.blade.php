@@ -34,15 +34,15 @@
                                     <tbody>
                                         @forelse ($users as $item)
                                             <tr id="tr_{{ $item->trxIds->user_id }}">
-                                                <td>{{ $item->user_id }}</td>
-                                                <td>{{ $item->name }}</td>
-                                                <td>{{ $item->balance }}</td>
-                                                <td>{{ $item->trxIds->plan_name }}</td>
-                                                <td>{{ $item->referral }}</td>
-                                                <td>{{ $item->trxIds->trx }}</td>
-                                                <td>{{ $item->trxIds->account }}</td>
-                                                <td>{{ $item->status }}</td>
-                                                <td>
+                                                <td class="text-dark">{{ $item->user_id }}</td>
+                                                <td class="text-dark">{{ $item->name }}</td>
+                                                <td class="text-dark">{{ $item->balance }}</td>
+                                                <td class="text-dark">{{ $item->trxIds->plan_name }}</td>
+                                                <td class="text-dark">{{ $item->referral }}</td>
+                                                <td class="text-dark">{{ $item->trxIds->trx }}</td>
+                                                <td class="text-dark">{{ $item->trxIds->account }}</td>
+                                                <td class="text-dark">{{ $item->status }}</td>
+                                                <td class="text-dark">
                                                     <img src="{{ asset('images/' . $item->trxIds->img) }}"
                                                         class="img-fluid" height="50px" width="50px">
                                                 </td>
@@ -55,7 +55,7 @@
                                                             class="btn btn-danger rejectButton shadow btn-xs sharp me-1"><i
                                                                 class="fa-solid fa-xmark"></i></button>
                                                         <a href="{{ route('Admin.Edit.User', $item->id) }}"
-                                                            class="badge badge-info"><i class="fas fa-pencil-alt"></i></a>
+                                                             class="badge badge-info"><i class="fas fa-pencil-alt"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>
