@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\admin;
 use App\Http\Middleware\feeCheck;
+use App\Http\Middleware\statusCheck;
 use App\Http\Middleware\user;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -18,6 +19,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'admin' => admin::class,
             'user' => user::class,
             'fees' => feeCheck::class,
+            'status' => statusCheck::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

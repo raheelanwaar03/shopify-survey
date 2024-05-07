@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('dollar_rate');
             $table->string('first_commission');
             $table->string('second_commission');
-            $table->string('third_commission');
             $table->string('status')->default('0');
             $table->timestamps();
         });

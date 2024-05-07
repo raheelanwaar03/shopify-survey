@@ -38,7 +38,7 @@ Route::middleware('guest')->group(function () {
 
 Route::get('Plans', [Landingpage::class, 'plans'])->name('Plans')->middleware('auth');
 Route::post('Buy/Plan', [Landingpage::class, 'buyPlan'])->name('Buy.Plan')->middleware('auth');
-Route::get('Verification', [Landingpage::class, 'okay'])->name('Verification.Page')->middleware('auth');
+Route::get('Verification', [Landingpage::class, 'okay'])->name('Verification.Page')->middleware('auth', 'status');
 
 Route::middleware('auth')->group(function () {
     Route::get('verify-email', EmailVerificationPromptController::class)

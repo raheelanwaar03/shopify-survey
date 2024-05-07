@@ -29,13 +29,13 @@ class UserMangementController extends Controller
 
         // Taking the admin commission
         $setting = WithdrawSetting::where('status', '1')->first();
-        $silver = $setting->planA * $setting->first_commission / 100;
-        $silver_Second_Commission = $setting->planA * $setting->second_commission / 100;
-        $silver_Third_Commission = $setting->planA * $setting->third_commission / 100;
+        $silver = $setting->planA;
+        $silver_Second_Commission = $setting->planA * $setting->first_commission / 100;
+        $silver_Third_Commission = $setting->planA * $setting->second_commission / 100;
         // getting gold commission
-        $gold = $setting->planB * $setting->first_commission / 100;
+        $gold = $setting->planB;
         $gold_Second_Commission = $setting->planA * $setting->first_commission / 100;
-        $gold_Third_Commission = $setting->planA * $setting->first_commission / 100;
+        $gold_Third_Commission = $setting->planA * $setting->second_commission / 100;
 
 
         $user = User::where('id', $id)->with('trxIds')->first();
