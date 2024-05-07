@@ -79,7 +79,6 @@
     <script src="{{ asset('asset/js/plugins-init/datatables.init.js') }}"></script>
 
     {{-- User Status mangement --}}
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
