@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="invest" class="form-label">Product Investment</label>
-                                    <input type="number" name="invest" id="invest" class="form-control"
+                                    <input type="number" name="invest" id="invest" step="0.00005" class="form-control"
                                         placeholder="Product Investment">
                                 </div>
                                 <div class="form-group">
