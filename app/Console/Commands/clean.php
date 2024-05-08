@@ -129,14 +129,14 @@ class clean extends Command
         // adding plans
 
         $plan = new AdminPlans();
-        $plan->plan_name = 'Silver';
+        $plan->plan_name = 'Basic';
         $plan->invest = '100';
         $plan->profit = 'Unlimited';
         $plan->expire = 'LifeTime';
         $plan->save();
 
         $plan = new AdminPlans();
-        $plan->plan_name = 'Gold';
+        $plan->plan_name = 'Premium';
         $plan->invest = '200';
         $plan->profit = 'Unlimited';
         $plan->expire = 'LifeTime';
