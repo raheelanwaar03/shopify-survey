@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use App\Models\admin\ContactUs;
 use App\Models\admin\MarqueeText;
 use App\Models\admin\Task;
 use App\Models\admin\WithdrawSetting;
@@ -99,4 +100,12 @@ class UserDashboardController extends Controller
         $user = User::where('id', auth()->user()->id)->with('trxIds')->first();
         return view('user.profile', compact('user'));
     }
+
+    public function contact()
+    {
+        $contact = ContactUs::where('status',1)->first();
+        return view('user.contact',compact('contact'));
+    }
+
+
 }

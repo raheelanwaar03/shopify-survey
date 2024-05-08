@@ -121,8 +121,13 @@
                         </ul>
                     </li>
                     <li><a href="{{ route('User.Profile.Details') }}">
-                        <i class="fa-solid fa-user text-white"></i>
+                            <i class="fa-solid fa-user text-white"></i>
                             <span class="nav-text text-white">Profile</span>
+                        </a>
+                    </li>
+                    <li><a href="{{ route('User.Contact.Us') }}">
+                        <i class="fa-regular fa-address-card text-white"></i>
+                            <span class="nav-text text-white">Contact Us</span>
                         </a>
                     </li>
                     <li>

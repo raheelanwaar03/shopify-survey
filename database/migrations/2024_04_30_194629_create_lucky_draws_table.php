@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('lucky_draws', function (Blueprint $table) {
             $table->id();
             $table->string('item_name');
-            $table->string('des');
-            $table->string('invest');
+            $table->text('des');
+            $table->float('invest', 7, 4);
             $table->string('image');
             $table->timestamps();
         });
