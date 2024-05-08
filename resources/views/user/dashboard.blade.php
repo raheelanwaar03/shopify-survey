@@ -15,10 +15,10 @@
         }
 
         .modal-content {
-            background-color: #fefefe;
+            background-color: forestgreen;
             margin: 15% auto;
             padding: 20px;
-            border: 1px solid #888;
+            border: 1px solid green;
             width: 80%;
         }
     </style>
@@ -151,9 +151,10 @@
 
 @section('scripts')
     <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close fs-4">&times;</span>
-            <p>{{ $text->text }}.</p>
+        <div class="modal-content" style="background-color:rgb(10, 160, 10);">
+            <span class="close fs-4 text-white" style="cursor: pointer;">&times;</span>
+            <p class="text-white"><span class="underline" style="font-size: 25px;">Note:</span> <br>
+                {{ $text->text }}.</p>
         </div>
     </div>
     <script>
