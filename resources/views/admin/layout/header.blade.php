@@ -146,6 +146,8 @@
                             <li><a href="{{ route('Admin.Edit.Contact') }}" class="text-white">Contact Details</a>
                             </li>
                             <li><a href="{{ route('Admin.Edit.Level') }}" class="text-white">Level Setting</a></li>
+                            <li><a href="{{ route('Admin.Edit.Luck') }}" class="text-white">Edit Lucky
+                                    Wallet</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">

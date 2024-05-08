@@ -54,6 +54,8 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::post('Update/Contact/{id}', [SettingController::class, 'updateContact'])->name('Update.Contact');
     Route::get('Edit/Level', [SettingController::class, 'editLevel'])->name('Edit.Level');
     Route::post('Update/Level/{id}', [SettingController::class, 'updateLevel'])->name('Update.Level');
+    Route::get('Edit/Luck/Wallet', [SettingController::class, 'editLuck'])->name('Edit.Luck');
+    Route::post('Update/Luck/Wallet/{id}', [SettingController::class, 'updateLuck'])->name('Update.Luck');
     // withdraw
     Route::get('Pending/Withdraw', [WithdrawController::class, 'pendingWithdraw'])->name('Pending.Withdraw');
     Route::get('Approved/Withdraw', [WithdrawController::class, 'approvedWithdraw'])->name('Approved.Withdraw');

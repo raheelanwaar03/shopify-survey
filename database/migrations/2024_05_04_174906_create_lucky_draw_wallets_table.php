@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('lucky_draw_wallets', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->text('text');
             $table->string('bank');
             $table->string('number');
             $table->string('people');

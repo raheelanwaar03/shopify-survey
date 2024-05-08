@@ -146,6 +146,7 @@ class clean extends Command
 
         $wallet = new luckyDrawWallet();
         $wallet->name = 'User Name';
+        $wallet->text = 'Here will be admin text';
         $wallet->bank = 'EasyPaisa';
         $wallet->number = '03121122333';
         $wallet->people = '100';

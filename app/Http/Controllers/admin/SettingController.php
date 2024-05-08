@@ -8,6 +8,7 @@ use App\Models\admin\referralLevel;
 use App\Models\admin\VerificationText;
 use App\Models\admin\Wallet;
 use App\Models\admin\WithdrawSetting;
+use App\Models\user\luckyDrawWallet;
 use Illuminate\Http\Request;
 
 class SettingController extends Controller
@@ -99,5 +100,23 @@ class SettingController extends Controller
         $level->level10 = $request->level10;
         $level->save();
         return redirect()->back()->with('success', 'Levels Setting Updated');
+    }
+
+    public function editLuck()
+    {
+        $luck = luckyDrawWallet::where('status', 1)->first();
+        return view('admin.setting.editLuck', compact('luck'));
+    }
+
+    public function updateLuck(Request $request, $id)
+    {
+        $luck = luckyDrawWallet::find($id);
+        $luck->name = $request->name;
+        $luck->text = $request->text;
+        $luck->people = $request->people;
+        $luck->number = $request->number;
+        $luck->bank = $request->bank;
+        $luck->save();
+        return redirect()->back()->with('success', 'Updated successfully');
     }
 }
