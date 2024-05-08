@@ -24,7 +24,7 @@ class TeamMemberController extends Controller
         return view('user.luck.draw', compact('luck', 'wallet'));
     }
 
-    public function investLucky()
+    public function investLucky(Request $request)
     {
         return redirect()->back()->with('success', 'You applied successfully! Winner will be announce soon.');
     }

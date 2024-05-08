@@ -20,6 +20,6 @@ Route::name('User.')->prefix('User')->middleware('auth', 'user', 'fees')->group(
     Route::get('Get/Tasks/Reward/{id}', [UserDashboardController::class, 'getReward'])->name('Get.task.Reward');
     // lucky Draw
     Route::get('Lucky/Draw',[TeamMemberController::class,'luckyDraw'])->name('Lucky.Draw');
-    Route::get('Invest/Lucky/Draw/',[TeamMemberController::class,'investLucky'])->name('Invest.Lucky.Draw');
+    Route::post('Invest/Lucky/Draw/',[TeamMemberController::class,'investLucky'])->name('Invest.Lucky.Draw');
     Route::get('Lucky/Draw/Winner',[TeamMemberController::class,'winner'])->name('Lucky.Winner');
 });
