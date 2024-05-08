@@ -45,7 +45,7 @@ class clean extends Command
         $user = new User();
         $user->name = 'Admin';
         $user->referral = 'default';
-        $user->balance = '0';
+        $user->balance = 0.00;
         $user->email = 'admin@gmail.com';
         $user->country = 'Pakistan';
         $user->password = Hash::make('asdfasdf');
