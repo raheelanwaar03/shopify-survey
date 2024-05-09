@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\admin\ContactUs;
+use App\Models\admin\MarqueeText;
 use App\Models\admin\referralLevel;
 use App\Models\admin\VerificationText;
 use App\Models\admin\Wallet;
@@ -117,6 +118,20 @@ class SettingController extends Controller
         $luck->number = $request->number;
         $luck->bank = $request->bank;
         $luck->save();
+        return redirect()->back()->with('success', 'Updated successfully');
+    }
+
+    public function welcomeText()
+    {
+        $text = MarqueeText::first();
+        return view('admin.setting.welcomeText', compact('text'));
+    }
+
+    public function updateWelcomeText(Request $request, $id)
+    {
+        $marqueeText = MarqueeText::find($id);
+        $marqueeText->text = $request->text;
+        $marqueeText->save();
         return redirect()->back()->with('success', 'Updated successfully');
     }
 }

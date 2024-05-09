@@ -140,6 +140,8 @@
                         <ul aria-expanded="false">
                             <li><a href="{{ route('Admin.Edit.Text') }}" class="text-white">Verification Text</a>
                             </li>
+                            <li><a href="{{ route('Admin.Edit.Welcome.Text') }}" class="text-white">Welcome Text</a>
+                            </li>
                             <li><a href="{{ route('Admin.Edit.Wallet') }}" class="text-white">Change Wallet</a></li>
                             <li><a href="{{ route('Admin.Edit.Setting') }}" class="text-white">Withdraw Limit</a>
                             </li>
