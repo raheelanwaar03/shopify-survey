@@ -17,17 +17,6 @@ class UserDashboardController extends Controller
 {
     public function index()
     {
-        if (!Session::has('modal_shown')) {
-            $text = MarqueeText::where('status', 1)->first();
-            $setting = WithdrawSetting::where('status', 1)->first();
-            $withdrawAble = $setting->dollar_rate * auth()->user()->balance;
-            $user = User::where('id', auth()->user()->id)->with('trxIds')->first();
-            // Set the session variable to indicate that the modal has been shown
-            Session::put('modal_shown', true);
-            // Pass a variable to the view to indicate that the modal should be shown
-            return view('user.dashboard', compact('user', 'text', 'withdrawAble'))->with('show_modal', true);
-        }
-
         $text = MarqueeText::where('status', 1)->first();
         $setting = WithdrawSetting::where('status', 1)->first();
         $withdrawAble = $setting->dollar_rate * auth()->user()->balance;
