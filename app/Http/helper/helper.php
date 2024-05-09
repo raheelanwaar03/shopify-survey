@@ -147,3 +147,11 @@ function extraBalance()
     $balance = ExtraMoney::where('user_id', auth()->user()->id)->get()->sum('balance');
     return $balance;
 }
+
+
+function extraBalance_inPkr()
+{
+    $setting = WithdrawSetting::where('status', 1)->first();
+    $balance = ExtraMoney::where('user_id', auth()->user()->id)->get()->sum('balance');
+    return $balance * $setting->dollar_rate;
+}

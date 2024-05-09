@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="text-center">Earn more with these tasks</h2>
-                    <h3 class="text-center mb-3">Balance: {{ extraBalance() }}</h3>
+                    <h3 class="text-center mb-3">Balance: ${{ extraBalance() }} | {{ extraBalance_inPkr() }} pkr</h3>
                     <div class="text-center">
                         <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal"
                             data-bs-target="#exampleModalCenter">Withdraw Now</button>
