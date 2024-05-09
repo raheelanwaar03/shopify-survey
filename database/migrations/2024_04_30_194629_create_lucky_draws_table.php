@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('item_name');
             $table->text('des');
-            $table->float('invest', 7, 4);
             $table->string('image');
             $table->timestamps();
         });

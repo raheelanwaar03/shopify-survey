@@ -24,7 +24,6 @@ class LuckyDrawController extends Controller
         $product = new LuckyDraw();
         $product->item_name = $request->item_name;
         $product->des = $request->des;
-        $product->invest = $request->invest;
         $product->image = $imageName;
         $product->save();
         return redirect()->route('Admin.All.Lucky.Product')->with('success', 'Product added successfully');

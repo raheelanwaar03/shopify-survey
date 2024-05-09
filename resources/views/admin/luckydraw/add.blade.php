@@ -24,11 +24,6 @@
                                     <textarea name="des" id="des" cols="5" rows="5" class="form-control"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="invest" class="form-label">Product Investment</label>
-                                    <input type="number" name="invest" id="invest" step="0.00005" class="form-control"
-                                        placeholder="Product Investment">
-                                </div>
-                                <div class="form-group">
                                     <label for="img" class="form-label">Product Image</label>
                                     <input type="file" name="image" id="img" class="form-control">
                                 </div>

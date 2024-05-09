@@ -24,10 +24,7 @@
                                     <img class="card-img-top" src="{{ asset('products/' . $item->image) }}"
                                         alt="Card image cap">
                                     <div class="card-body">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <h5 class="card-title">{{ $item->item_name }}</h5>
-                                            <h5 class="card-title">Invest : {{ $item->invest }}</h5>
-                                        </div>
+                                        <h5 class="text-center card-title">{{ $item->item_name }}</h5>
                                         <p class="card-text">{{ $item->des }}</p>
                                         <a href="#form" class="btn btn-success mb-2">Invest</a>
                                     </div>
@@ -56,19 +53,11 @@
                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-header">
-                                <h3>Enter Details</h3>
+                                <h3 class="text-success">Enter Details</h3>
                             </div>
                             <div class="card-body bg-success">
                                 <form action="{{ route('User.Invest.Lucky.Draw') }}" method="POST" id="form">
                                     @csrf
-                                    <div class="form-group">
-                                        <label for="prouduct" class="form-label text-white fs-4">Product</label>
-                                        <select name="product" id="product" class="form-control">
-                                            @foreach ($luck as $item)
-                                                <option value="{{ $item->item_name }}">{{ $item->item_name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
                                     <div class="form-group">
                                         <label for="trx" class="form-label text-white fs-4">Trx ID</label>
                                         <input type="text" name="trx" id="trx" placeholder="Enter Trx ID"
