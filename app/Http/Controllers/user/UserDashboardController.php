@@ -9,6 +9,7 @@ use App\Models\admin\MarqueeText;
 use App\Models\admin\Task;
 use App\Models\admin\WithdrawSetting;
 use App\Models\User;
+use App\Models\user\ExtraMoney;
 use App\Models\user\TodayRewardCheck;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -28,7 +29,7 @@ class UserDashboardController extends Controller
     public function extra()
     {
         $task = ExtraTasks::get();
-        return view('user.tasks.extra',compact('task'));
+        return view('user.tasks.extra', compact('task'));
     }
 
     public function tasks()
@@ -99,9 +100,32 @@ class UserDashboardController extends Controller
 
     public function contact()
     {
-        $contact = ContactUs::where('status',1)->first();
-        return view('user.contact',compact('contact'));
+        $contact = ContactUs::where('status', 1)->first();
+        return view('user.contact', compact('contact'));
     }
 
+    public function getExtraReward($id)
+    {
+        $task = ExtraTasks::where('id', $id)->first();
+        $visitor = TodayRewardCheck::where('user_id', auth()->user()->id)->where('task_id', $id)->whereDate('created_at', '=', Carbon::today())->first();
+        if (!$visitor) {
+            // storing product
+            $visitor = new TodayRewardCheck();
+            $visitor->user_id = auth()->user()->id;
+            $visitor->task_id = $id;
+            $visitor->price = $task->price;
+            $visitor->save();
+            $user = new ExtraMoney();
+            $user->user_id = auth()->user()->id;
+            $user->balance += $task->price;
+            $user->save();
+            return redirect()->back()->with('success', 'Reward recived');
+        }
+        return redirect()->back()->with('error', 'already recived');
+    }
 
+    public function lessLevel(Request $request)
+    {
+        return redirect()->back()->with('error', 'You can withdraw this amount when your level will be 10');
+    }
 }

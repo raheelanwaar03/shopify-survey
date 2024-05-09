@@ -3,6 +3,7 @@
 use App\Models\admin\Task;
 use App\Models\admin\WithdrawSetting;
 use App\Models\User;
+use App\Models\user\ExtraMoney;
 use App\Models\user\Withdraw;
 
 function total_team()
@@ -45,7 +46,6 @@ function total_withdraw_pkr()
     }
 
     return $total_withdraw;
-
 }
 
 function pending_withdraw()
@@ -114,13 +114,13 @@ function all_users()
 
 function paid_users()
 {
-    $user = User::where('status','approved')->get()->count();
+    $user = User::where('status', 'approved')->get()->count();
     return $user;
 }
 
 function unpaid_users()
 {
-    $user = User::where('status','pending')->get()->count();
+    $user = User::where('status', 'pending')->get()->count();
     return $user;
 }
 
@@ -132,13 +132,18 @@ function all_withdraw()
 
 function all_pending_withdraw()
 {
-    $withdraw = Withdraw::where('status','pending')->get()->sum('amount');
+    $withdraw = Withdraw::where('status', 'pending')->get()->sum('amount');
     return $withdraw;
 }
 
-
 function all_approved_withdraw()
 {
-    $withdraw = Withdraw::where('status','approved')->get()->sum('amount');
+    $withdraw = Withdraw::where('status', 'approved')->get()->sum('amount');
     return $withdraw;
+}
+
+function extraBalance()
+{
+    $balance = ExtraMoney::where('user_id', auth()->user()->id)->get()->sum('balance');
+    return $balance;
 }

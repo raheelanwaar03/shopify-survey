@@ -118,7 +118,7 @@
                             <li><a href="{{ route('Admin.Add.Task') }}" class="text-white">Add Task</a></li>
                             <li><a href="{{ route('Admin.All.Task') }}" class="text-white">All Tasks</a></li>
                             <li><a href="{{ route('Admin.Add.Extra.Earning.Task') }}" class="text-white">Extra
-                                    Earning</a></li>
+                                    Task</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon text-white" href="javascript:void()" aria-expanded="false">
