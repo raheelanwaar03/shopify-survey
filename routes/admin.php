@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\admin\AdminPlansController;
+use App\Http\Controllers\admin\ExtraEarningController;
 use App\Http\Controllers\admin\LuckyDrawController;
 use App\Http\Controllers\admin\SettingController;
 use App\Http\Controllers\admin\TaskController;
@@ -64,4 +65,7 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     Route::get('Rejected/Withdraw', [WithdrawController::class, 'rejectedWithdraw'])->name('Rejected.Withdraw');
     Route::get('Make/Withdraw/Approve/{id}', [WithdrawController::class, 'makeApprove'])->name('Make.Withdraw.Approve');
     Route::get('Make/Withdraw/Rejected/{id}', [WithdrawController::class, 'makeRejected'])->name('Make.Withdraw.Rejected');
+    // Extra earning routes
+    Route::get('Add/Extra/Earning/Task',[ExtraEarningController::class,'addExtraTask'])->name('Add.Extra.Earning.Task');
+    Route::post('Store/Extra/Earning/Task',[ExtraEarningController::class,'storeExtraTask'])->name('Store.Extra.Earning.Task');
 });

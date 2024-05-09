@@ -88,10 +88,14 @@
                             <span class="nav-text text-white">Dashboard</span>
                         </a>
                     </li>
-                    <li><a class="" href="{{ route('User.new.tasks') }}">
-                            <i class="fa-solid fa-briefcase text-white" style="font-size: 20px"></i>
-                            <span class="nav-text text-white">Tasks</span>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-043-menu text-white"></i>
+                            <span class="nav-text text-white">Task</span>
                         </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{ route('User.new.tasks') }}" class="text-white">Daily Task</a></li>
+                            <li><a href="{{ route('User.Extra.Tasks') }}" class="text-white">Earn Extra</a></li>
+                        </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="fa-solid fa-wallet text-white" style="font-size: 20px"></i>
@@ -108,7 +112,8 @@
                             <span class="nav-text text-white">Team</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ route('User.All.Members') }}" class="text-white">All Team Members</a></li>
+                            <li><a href="{{ route('User.All.Members') }}" class="text-white">All Team Members</a>
+                            </li>
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -126,7 +131,7 @@
                         </a>
                     </li>
                     <li><a href="{{ route('User.Contact.Us') }}">
-                        <i class="fa-regular fa-address-card text-white"></i>
+                            <i class="fa-regular fa-address-card text-white"></i>
                             <span class="nav-text text-white">Contact Us</span>
                         </a>
                     </li>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use App\Models\admin\ContactUs;
+use App\Models\admin\ExtraTasks;
 use App\Models\admin\MarqueeText;
 use App\Models\admin\Task;
 use App\Models\admin\WithdrawSetting;
@@ -22,6 +23,12 @@ class UserDashboardController extends Controller
         $withdrawAble = $setting->dollar_rate * auth()->user()->balance;
         $user = User::where('id', auth()->user()->id)->with('trxIds')->first();
         return view('user.dashboard', compact('user', 'text', 'withdrawAble'))->with('show_modal');
+    }
+
+    public function extra()
+    {
+        $task = ExtraTasks::get();
+        return view('user.tasks.extra',compact('task'));
     }
 
     public function tasks()

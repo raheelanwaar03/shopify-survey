@@ -16,6 +16,7 @@ Route::name('User.')->prefix('User')->middleware('auth', 'user', 'fees')->group(
     // Team routes
     Route::get('All/Member', [TeamMemberController::class, 'team'])->name('All.Members');
     // All Tasks
+    Route::get('Earn/Extra', [UserDashboardController::class, 'extra'])->name('Extra.Tasks');
     Route::get('New/Tasks', [UserDashboardController::class, 'tasks'])->name('new.tasks');
     Route::get('Get/Tasks/Reward/{id}', [UserDashboardController::class, 'getReward'])->name('Get.task.Reward');
     // lucky Draw
