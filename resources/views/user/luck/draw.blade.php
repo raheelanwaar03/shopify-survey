@@ -26,7 +26,6 @@
                                     <div class="card-body">
                                         <h5 class="text-center card-title">{{ $item->item_name }}</h5>
                                         <p class="card-text">{{ $item->des }}</p>
-                                        <a href="#form" class="btn btn-success mb-2">Invest</a>
                                     </div>
                                 </div>
                             </div>

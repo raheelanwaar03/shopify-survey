@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('link');
             $table->text('des');
             $table->float('price', 7, 3);
-            $table->string('image');
             $table->timestamps();
         });
     }

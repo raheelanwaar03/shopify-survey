@@ -21,15 +21,14 @@
                                     <thead>
                                         <tr>
                                             <th>Product Name</th>
-                                            <th>Investment</th>
                                             <th>Image</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @forelse ($product as $item)
                                             <tr>
                                                 <td>{{ $item->item_name }}</td>
-                                                <td>{{ $item->invest }}</td>
                                                 <td>
                                                     <img src="{{ asset('products/' . $item->image) }}" height="50px"
                                                         width="50px" class="img-fluid">

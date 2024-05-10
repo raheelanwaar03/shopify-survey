@@ -68,4 +68,5 @@ Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(funct
     // Extra earning routes
     Route::get('Add/Extra/Earning/Task',[ExtraEarningController::class,'addExtraTask'])->name('Add.Extra.Earning.Task');
     Route::post('Store/Extra/Earning/Task',[ExtraEarningController::class,'storeExtraTask'])->name('Store.Extra.Earning.Task');
+    Route::get('Del/Extra/Task/{id}',[ExtraEarningController::class,'delExtraTask'])->name('Del.Extra.Task');
 });
