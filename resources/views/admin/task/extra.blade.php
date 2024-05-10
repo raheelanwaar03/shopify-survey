@@ -50,8 +50,6 @@
                         <thead>
                             <tr>
                                 <th>Title</th>
-                                <th>Plan</th>
-                                <th>Level</th>
                                 <th>Earning</th>
                                 <th>link</th>
                                 <th>Action</th>
@@ -61,8 +59,6 @@
                             @forelse ($extraTask as $item)
                                 <tr>
                                     <td>{{ $item->title }}</td>
-                                    <td>{{ $item->plan }}</td>
-                                    <td>{{ $item->level }}</td>
                                     <td>{{ number_format($item->price, 5) }}</td>
                                     <td>{{ $item->link }}</td>
                                     <td>
