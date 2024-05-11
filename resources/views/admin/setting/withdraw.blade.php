@@ -30,22 +30,22 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="planA" class="form-label">Plan A</label>
-                                    <input type="number" name="planA" id="planA" step="0.00001" class="form-control"
+                                    <input type="number" name="planA" id="planA" step="0.000001" class="form-control"
                                         value="{{ $withdraw->planA }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="planB" class="form-label">Plan B</label>
-                                    <input type="number" name="planB" id="planB" step="0.00001" class="form-control"
+                                    <input type="number" name="planB" id="planB" step="0.000001" class="form-control"
                                         value="{{ $withdraw->planB }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="first" class="form-label">Second Commission</label>
-                                    <input type="number" name="first_commission" step="0.00001" id="first"
+                                    <input type="number" name="first_commission" step="0.000001" id="first"
                                         class="form-control" value="{{ $withdraw->first_commission }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="second" class="form-label">Third Commission</label>
-                                    <input type="number" name="second_commission" step="0.00001" id="second"
+                                    <input type="number" name="second_commission" step="0.000001" id="second"
                                         class="form-control" value="{{ $withdraw->second_commission }}">
                                 </div>
                                 <div class="m-3">

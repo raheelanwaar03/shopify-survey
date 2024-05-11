@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('min_amount');
             $table->string('max_amount');
-            $table->float('planA', 5, 5);
-            $table->float('planB', 5, 5);
-            $table->float('dollar_rate', 5, 5);
-            $table->float('first_commission', 5, 5);
-            $table->float('second_commission', 5, 5);
+            $table->float('planA', 7, 5);
+            $table->float('planB', 7, 5);
+            $table->float('dollar_rate', 7, 5);
+            $table->float('first_commission', 7, 5);
+            $table->float('second_commission', 7, 5);
             $table->string('status')->default('0');
             $table->timestamps();
         });
