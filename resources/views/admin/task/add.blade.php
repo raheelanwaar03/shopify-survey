@@ -25,7 +25,7 @@
                                 <div class="form-group">
                                     <label for="invest" class="form-label">Earning</label>
                                     <input type="number" name="earning" id="invest" class="form-control"
-                                        placeholder="Task Earning which will users get" step="0.000001">
+                                        placeholder="Task Earning which will users get" step="0.0000001">
                                 </div>
                                 <div class="form-group">
                                     <label for="plan_name" class="form-label">Select Plan</label>
