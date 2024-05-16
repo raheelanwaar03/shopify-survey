@@ -7,7 +7,7 @@
                 <div class="col-md-12">
                     <h2 class="text-center">Earn more with these tasks</h2>
                     <h3 class="text-center mb-3">Balance: ${{ extraBalance() }} | {{ extraBalance_inPkr() }} pkr</h3>
-                    <div class="text-center">
+                    <div class="text-center m-3">
                         <a href="{{ route('User.Less.Level') }}" class="btn btn-success">Withdraw Now</a>
                     </div>
                 </div>
