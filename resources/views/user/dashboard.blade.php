@@ -57,7 +57,7 @@
                                 </svg>
                             </div>
                             <div>
-                                <h2 class="text-white invoice-num">0</h2>
+                                <h2 class="text-white invoice-num">{{ user_tasks() }}</h2>
                                 <span class="text-white fs-18">Today Tasks</span>
                             </div>
                         </div>

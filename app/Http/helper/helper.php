@@ -72,6 +72,14 @@ function pending_withdraw_pkr()
     return $total_withdraw;
 }
 
+function user_tasks()
+{
+    $user = User::where('id', auth()->user()->id)->with('trxIds')->first();
+    $tasks = Task::where('plan',$user->trxIds->plan_name)->where('level',$user->level)->count();
+    return $tasks;
+
+}
+
 function approved_withdraw()
 {
     $withdraw = Withdraw::where('user_id', auth()->user()->id)->where('status', 'approved')->get();
