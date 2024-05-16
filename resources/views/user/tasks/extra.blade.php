@@ -12,10 +12,10 @@
                 <div class="col-md-12">
                     <h2 class="text-center">Earn more with these tasks</h2>
                     <h3 class="text-center mb-3">Balance: ${{ extraBalance() }} | {{ extraBalance_inPkr() }} pkr</h3>
-                    <div class="text-center">
-                        <a href="{{ route('User.Less.Level') }}" class="btn btn-success mb-2">Withdraw Now</button>
-                    </div>
                 </div>
+            </div>
+            <div class="text-center">
+                <a href="{{ route('User.Less.Level') }}" class="btn btn-success mb-2">Withdraw Now</button>
             </div>
             <div class="row">
                 @foreach ($task as $item)
