@@ -13,8 +13,7 @@
                     <h2 class="text-center">Earn more with these tasks</h2>
                     <h3 class="text-center mb-3">Balance: ${{ extraBalance() }} | {{ extraBalance_inPkr() }} pkr</h3>
                     <div class="text-center">
-                        <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal"
-                            data-bs-target="#exampleModalCenter">Withdraw Now</button>
+                        <a href="{{ route('User.Less.Level') }}" class="btn btn-success mb-2">Withdraw Now</button>
                     </div>
                 </div>
             </div>
@@ -40,7 +39,7 @@
     <script src="{{ asset('asset/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('asset/js/plugins-init/datatables.init.js') }}"></script>
     {{-- model --}}
-    <div class="modal fade" id="exampleModalCenter">
+    {{-- <div class="modal fade" id="exampleModalCenter">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -81,5 +80,5 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection
