@@ -12,7 +12,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Team Members ({{ total_team() }})</h4>
+                            <h4 class="card-title">Team Members ({{ approved_team() }})</h4>
                             <h5 class="card-title">{{ auth()->user()->level }}</h5>
                         </div>
                         <div class="card-body">
