@@ -124,7 +124,7 @@ class UserDashboardController extends Controller
         return redirect()->back()->with('error', 'already recived');
     }
 
-    public function lessLevel(Request $request)
+    public function lessLevel()
     {
         return redirect()->back()->with('error', 'You can withdraw this amount when your level will be 10');
     }
