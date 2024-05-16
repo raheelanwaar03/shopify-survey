@@ -24,7 +24,7 @@
                                         value="{{ $user->email }}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="balance" class="form-label">User Balance</label>
+                                    <label for="balance" class="form-label">User Balance is in <b class="bold">$</b></label>
                                     <input type="text" name="balance" id="balance" class="form-control"
                                         value="{{ $user->balance }}">
                                 </div>
@@ -53,8 +53,8 @@
                                     <label for="plan" class="form-label">User Plan</label>
                                     <select name="plan" class="form-control" value="{{ $user->trxIds->plan_name }}"
                                         id="plan">
-                                        <option value="Silver">Silver</option>
-                                        <option value="Gold">Gold</option>
+                                        <option value="Basic">Basic</option>
+                                        <option value="Premium">Premium</option>
                                     </select>
                                 </div>
                                 <div class="">
