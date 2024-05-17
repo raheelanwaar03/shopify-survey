@@ -33,7 +33,7 @@ class AdminDashboardController extends Controller
             ->whereHas('trxIds', function ($query) {
                 $query->whereNotNull('trx')->whereNotNull('img')
                     ->whereNotNull('user_name')->whereNotNull('account');
-            })->whereDate('creat_at', Carbon::today())->get();
+            })->whereDate('created_at', Carbon::today())->get();
 
         return view('admin.user.today', compact('users'));
     }
