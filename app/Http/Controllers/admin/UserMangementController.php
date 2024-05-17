@@ -54,10 +54,6 @@ class UserMangementController extends Controller
                 $referCount = $allUsers->count();
 
                 if ($allUsers != '') {
-                    if ($referCount <= 1) {
-                        $firstUpliner->level = 'Level 0';
-                        $firstUpliner->save();
-                    }
                     if ($referCount >= $level1) {
                         $firstUpliner->level = 'Level 1';
                         $firstUpliner->save();
@@ -134,10 +130,6 @@ class UserMangementController extends Controller
                 $referCount = $mainUser->count();
 
                 if ($mainUser != '') {
-                    if ($referCount <= 1) {
-                        $firstUpliner->level = 'Level 0';
-                        $firstUpliner->save();
-                    }
                     if ($referCount >= $level1) {
                         $firstUpliner->level = 'Level 1';
                         $firstUpliner->save();
