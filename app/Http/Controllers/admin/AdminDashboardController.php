@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\user\BuyPlan;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -24,6 +25,17 @@ class AdminDashboardController extends Controller
             })->get();
 
         return view('admin.user.allUsers', compact('users'));
+    }
+
+    public function todayUsers()
+    {
+        $users = User::has('trxIds')
+            ->whereHas('trxIds', function ($query) {
+                $query->whereNotNull('trx')->whereNotNull('img')
+                    ->whereNotNull('user_name')->whereNotNull('account');
+            })->whereDate('creat_at', Carbon::today())->get();
+
+        return view('admin.user.today', compact('users'));
     }
 
     public function pendingUsers()
@@ -65,12 +77,12 @@ class AdminDashboardController extends Controller
         return view('admin.user.edit', compact('user'));
     }
 
-    public function updateUserPlan(Request $request,$id)
+    public function updateUserPlan(Request $request, $id)
     {
-        $plan = BuyPlan::where('user_id',$request->user_id)->where('id',$id)->first();
+        $plan = BuyPlan::where('user_id', $request->user_id)->where('id', $id)->first();
         $plan->plan_name = $request->plan;
         $plan->save();
-        return redirect()->back()->with('success','Plan changed');
+        return redirect()->back()->with('success', 'Plan changed');
     }
 
     public function updateUser(Request $request, $id)

@@ -103,6 +103,7 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="{{ route('Admin.All.Users') }}" class="text-white">All Users</a></li>
+                            <li><a href="{{ route('Admin.Today.Users') }}" class="text-white">Today Users</a></li>
                             <li><a href="{{ route('Admin.Pending.Users') }}" class="text-white">Pending Users</a></li>
                             <li><a href="{{ route('Admin.Approved.Users') }}" class="text-white">Approved Users</a>
                             </li>

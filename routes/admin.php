@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 Route::name('Admin.')->prefix('Admin')->middleware('auth', 'admin')->group(function () {
     Route::get('/Dashboard', [AdminDashboardController::class, 'index'])->name('Dashboard');
     Route::get('/All/Users', [AdminDashboardController::class, 'allUsers'])->name('All.Users');
+    Route::get('/Today/Users', [AdminDashboardController::class, 'todayUsers'])->name('Today.Users');
     Route::get('/Pending/Users', [AdminDashboardController::class, 'pendingUsers'])->name('Pending.Users');
     Route::get('/Approved/Users', [AdminDashboardController::class, 'approvedUsers'])->name('Approved.Users');
     Route::get('/Recjected/Users', [AdminDashboardController::class, 'rejectedUsers'])->name('Rejected.Users');
