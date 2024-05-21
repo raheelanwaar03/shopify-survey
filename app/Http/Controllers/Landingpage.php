@@ -41,6 +41,15 @@ class Landingpage extends Controller
             }
         }
 
+        $tidChecks = BuyPlan::get();
+        if ($tidChecks != null) {
+            foreach ($tidChecks as $tidCheck) {
+                $tidCheck = $tidCheck->trx_id;
+                if ($request->trx_id == $tidCheck)
+                    return redirect()->back()->with('error', 'This tid is used before');
+            }
+        }
+
         $trxID = $request->trx;
         $trxLength = strlen($trxID);
         if ($trxLength <= 10) {

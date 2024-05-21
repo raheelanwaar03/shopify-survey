@@ -12,6 +12,7 @@ function total_team()
     return $team;
 }
 
+
 function pending_team()
 {
     $team = User::where('referral', auth()->user()->user_id)->where('status', 'pending')->get()->count();

@@ -61,7 +61,7 @@ class WithdrawController extends Controller
         $withdraw->account = $request->account;
         $withdraw->bank = $request->bank;
         $withdraw->pre_withdraw = approved_withdraw();
-        $withdraw->total_team = total_team();
+        $withdraw->total_team = approved_team();
         $withdraw->save();
         return redirect()->route('User.All.Withdraw')->with('success', 'Successfully Done!');
     }
