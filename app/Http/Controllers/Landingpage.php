@@ -31,21 +31,10 @@ class Landingpage extends Controller
 
     public function buyPlan(Request $request)
     {
-
         $tidChecks = BuyPlan::get();
         if ($tidChecks != null) {
             foreach ($tidChecks as $item) {
-                $item = $item->trx;
-                if ($request->trx_id == $item)
-                    return redirect()->back()->with('error', 'This tid is used before');
-            }
-        }
-
-        $tidChecks = BuyPlan::get();
-        if ($tidChecks != null) {
-            foreach ($tidChecks as $tidCheck) {
-                $tidCheck = $tidCheck->trx_id;
-                if ($request->trx_id == $tidCheck)
+                if ($request->trx_id == $item->trx)
                     return redirect()->back()->with('error', 'This tid is used before');
             }
         }
