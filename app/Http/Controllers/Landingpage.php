@@ -34,7 +34,7 @@ class Landingpage extends Controller
         $tidChecks = BuyPlan::get();
         if ($tidChecks != null) {
             foreach ($tidChecks as $item) {
-                if ($request->trx_id == $item->trx)
+                if ($request->trx == $item->trx)
                     return redirect()->back()->with('error', 'This tid is used before');
             }
         }
