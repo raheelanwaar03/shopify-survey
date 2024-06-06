@@ -25,6 +25,7 @@
                                             <th>Amount</th>
                                             <th>Total Team</th>
                                             <th>Pre Withdraw</th>
+                                            <th>Date</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -37,6 +38,7 @@
                                                 <td>{{ $item->amount }}</td>
                                                 <td>{{ $item->total_team }}</td>
                                                 <td>{{ $item->pre_withdraw }}</td>
+                                                <td>{{ $item->created_at }}</td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <a href="{{ route('Admin.Make.Withdraw.Approve', $item->id) }}"
