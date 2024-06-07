@@ -16,22 +16,26 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table id="example3" class="display" style="min-width: 845px">
+                                <table id="" class="display" style="min-width: 300px">
                                     <thead>
-                                        <tr>
-                                            <th>Name</th>
+                                        <tr style="background: green;color:white" class="mb-4">
+                                            <th style="padding:5px">Name</th>
                                             <th>Amount</th>
                                             <th>Bank</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody >
                                         @forelse ($withdraw as $item)
                                             <tr>
-                                                <td>{{ $item->name }}</td>
-                                                <td>{{ $item->amount }}</td>
-                                                <td>{{ $item->bank }}</td>
-                                                <td>{{ $item->status }}</td>
+                                                <td style="color: black">{{ $item->name }}</td>
+                                                <td style="color: black">{{ $item->amount }}</td>
+                                                <td style="color: black">{{ $item->bank }}</td>
+                                                @if ($item->status == 'approved')
+                                                    <td class="badge badge-success">{{ $item->status }}</td>
+                                                @else
+                                                    <td class="badge badge-primary">{{ $item->status }}</td>
+                                                @endif
                                             </tr>
                                         @empty
                                         @endforelse
