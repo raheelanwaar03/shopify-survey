@@ -21,7 +21,7 @@ class WithdrawController extends Controller
 
     public function all()
     {
-        $withdraw = Withdraw::where('user_id', auth()->user()->id)->get();
+        $withdraw = Withdraw::where('user_id', auth()->user()->id)->latest()->get();
         return view('user.withdraw.all', compact('withdraw'));
     }
 
@@ -31,7 +31,7 @@ class WithdrawController extends Controller
             return redirect()->route('User.Dashboard')->with('error', 'Empty Balance');
         }
 
-        $setting = WithdrawSetting::where('status',1)->first();
+        $setting = WithdrawSetting::where('status', 1)->first();
         $withdrawAble = $setting->dollar_rate * auth()->user()->balance;
         if ($request->amount > $withdrawAble) {
             return redirect()->back()->with('error', 'Less Balance');
