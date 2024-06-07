@@ -19,16 +19,15 @@
                                 <table id="" class="display" style="min-width: 300px">
                                     <thead>
                                         <tr style="background: green;color:white" class="mb-4">
-                                            <th style="padding:5px">Name</th>
                                             <th>Amount</th>
                                             <th>Bank</th>
                                             <th>Status</th>
+                                            <th>Date</th>
                                         </tr>
                                     </thead>
                                     <tbody >
                                         @forelse ($withdraw as $item)
                                             <tr>
-                                                <td style="color: black">{{ $item->name }}</td>
                                                 <td style="color: black">{{ $item->amount }}</td>
                                                 <td style="color: black">{{ $item->bank }}</td>
                                                 @if ($item->status == 'approved')
@@ -36,6 +35,7 @@
                                                 @else
                                                     <td class="badge badge-primary">{{ $item->status }}</td>
                                                 @endif
+                                                <td style="color: black">{{ $item->created_at }}</td>
                                             </tr>
                                         @empty
                                         @endforelse
