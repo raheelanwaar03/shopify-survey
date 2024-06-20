@@ -42,7 +42,7 @@ class UserDashboardController extends Controller
     public function getReward($id)
     {
         $currentDate = Carbon::now();
-        $tenDaysAgo = $currentDate->subDays(15);
+        $tenDaysAgo = $currentDate->subDays(10);
         // checking user last 15 days referals
         $user = User::find(auth()->user()->id);
 
@@ -67,7 +67,7 @@ class UserDashboardController extends Controller
             return redirect()->back()->with('error', 'already recived');
         } else {
             $userReferal = User::where('referral', auth()->user()->user_id)->whereDate('created_at', '>=', $tenDaysAgo)->where('status', 'approved')->get();
-            if ($userReferal->isEmpty()) {
+            if ($userReferal == '') {
                 return redirect()->route('User.Dashboard')->with('error', 'You have not add any user from last 15 days. Please add new user to get rewarded');
             } else {
                 $task = Task::find($id);

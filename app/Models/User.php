@@ -75,6 +75,6 @@ class User extends Authenticatable
         $differenceInDays = Carbon::now()->diffInDays($createdAt);
 
         // Check if the difference is greater than or equal to 15
-        return $differenceInDays >= 15;
+        return $differenceInDays >= 10;
     }
 }
