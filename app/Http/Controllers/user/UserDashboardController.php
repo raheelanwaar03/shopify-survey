@@ -44,9 +44,9 @@ class UserDashboardController extends Controller
         $currentDate = Carbon::now();
         $tenDaysAgo = $currentDate->subDays(10);
         // checking user last 15 days referals
-        $user = User::find(auth()->user()->id);
+        $user = User::where('id', auth()->user()->id)->first();
 
-        if (!$user->isAccount15DaysOld()) {
+        if ($user->isAccount10DaysOld()) {
             $task = Task::find($id);
             $taskRewarad = $task->earning;
             $task->save();

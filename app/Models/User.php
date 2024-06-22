@@ -66,7 +66,7 @@ class User extends Authenticatable
         ];
     }
 
-    public function isAccount15DaysOld(): bool
+    public function isAccount10DaysOld(): bool
     {
         // Get the user's creation date (assuming the column name is "created_at")
         $createdAt = $this->created_at;
