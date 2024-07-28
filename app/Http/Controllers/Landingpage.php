@@ -55,22 +55,38 @@ class Landingpage extends Controller
         if ($user->status == 'rejected') {
             $user->status = 'pending';
             $user->save();
+            // del pre data and enter new dat
+            BuyPlan::where('user_id', auth()->user()->id)->delete();
+
+            $image = $request->img;
+            $imageName = rand(111111, 999999) . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images'), $imageName);
+
+            $user_plan = new BuyPlan();
+            $user_plan->user_id = auth()->user()->id;
+            $user_plan->plan_name = $request->plan_name;
+            $user_plan->trx = $request->trx;
+            $user_plan->account = $request->account;
+            $user_plan->user_name = $request->user_name;
+            $user_plan->img = $imageName;
+            $user_plan->save();
+            return redirect()->route('Verification.Page')->with('success', 'Buy successfull! Wait For Admin Approval');
+        } else {
+            $image = $request->img;
+            $imageName = rand(111111, 999999) . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images'), $imageName);
+
+
+            $user_plan = new BuyPlan();
+            $user_plan->user_id = auth()->user()->id;
+            $user_plan->plan_name = $request->plan_name;
+            $user_plan->trx = $request->trx;
+            $user_plan->account = $request->account;
+            $user_plan->user_name = $request->user_name;
+            $user_plan->img = $imageName;
+            $user_plan->save();
+            return redirect()->route('Verification.Page')->with('success', 'Buy successfull! Wait For Admin Approval');
         }
-
-        $image = $request->img;
-        $imageName = rand(111111, 999999) . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('images'), $imageName);
-
-
-        $user_plan = new BuyPlan();
-        $user_plan->user_id = auth()->user()->id;
-        $user_plan->plan_name = $request->plan_name;
-        $user_plan->trx = $request->trx;
-        $user_plan->account = $request->account;
-        $user_plan->user_name = $request->user_name;
-        $user_plan->img = $imageName;
-        $user_plan->save();
-        return redirect()->route('Verification.Page')->with('success', 'Buy successfull! Wait For Admin Approval');
     }
 
     public function okay()
