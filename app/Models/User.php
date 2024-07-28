@@ -70,11 +70,10 @@ class User extends Authenticatable
     {
         // Get the user's creation date (assuming the column name is "created_at")
         $createdAt = $this->created_at;
+        // Calculate the date 10 days ago
+        $tenDaysAgo = Carbon::now()->subDays(10);
+        // Compare the two dates
+        return $createdAt->lt($tenDaysAgo);
 
-        // Calculate the difference in days using Carbon
-        $differenceInDays = Carbon::now()->diffInDays($createdAt);
-
-        // Check if the difference is greater than or equal to 15
-        return $differenceInDays >= 10;
     }
 }

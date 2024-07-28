@@ -46,7 +46,7 @@ class UserDashboardController extends Controller
         // checking user last 15 days referals
         $user = User::where('id', auth()->user()->id)->first();
 
-        if ($user->isAccount10DaysOld()) {
+        if (!$user->isAccount10DaysOld() ) {
             $task = Task::find($id);
             $taskRewarad = $task->earning;
             $task->save();
@@ -67,8 +67,9 @@ class UserDashboardController extends Controller
             return redirect()->back()->with('error', 'already recived');
         } else {
             $userReferal = User::where('referral', auth()->user()->user_id)->whereDate('created_at', '>=', $tenDaysAgo)->where('status', 'approved')->get();
-            if ($userReferal == '') {
-                return redirect()->route('User.Dashboard')->with('error', 'You have not add any user from last 15 days. Please add new user to get rewarded');
+            // return $userReferal;
+            if ($userReferal->isEmpty()) {
+                return redirect()->route('User.Dashboard')->with('error', 'You have not add any user from last 10 days. Please add new user to get rewarded');
             } else {
                 $task = Task::find($id);
                 $taskRewarad = $task->earning;
